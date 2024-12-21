@@ -6,6 +6,7 @@ import Driving_Future from "./components/Home/Driving_Future";
 import Case_Studies from "./components/Home/Case_Studies";
 import Pertnering from "./components/Home/Pertnering";
 import News from "./components/Home/News";
+import Drive_Career from "./components/Home/Drive_Career";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Case_Studies />
       <Pertnering />
       <News />
+      <Drive_Career />
     </>
   );
 }
