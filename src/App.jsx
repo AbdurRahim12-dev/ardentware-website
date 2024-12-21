@@ -5,6 +5,7 @@ import Press_Release from "./components/Home/Press_Release";
 import Driving_Future from "./components/Home/Driving_Future";
 import Case_Studies from "./components/Home/Case_Studies";
 import Pertnering from "./components/Home/Pertnering";
+import News from "./components/Home/News";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Driving_Future />
       <Case_Studies />
       <Pertnering />
+      <News />
     </>
   );
 }
