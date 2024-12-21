@@ -4,6 +4,7 @@ import Hero from "./components/Home/Hero";
 import Press_Release from "./components/Home/Press_Release";
 import Driving_Future from "./components/Home/Driving_Future";
 import Case_Studies from "./components/Home/Case_Studies";
+import Pertnering from "./components/Home/Pertnering";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Press_Release />
       <Driving_Future />
       <Case_Studies />
+      <Pertnering />
     </>
   );
 }
