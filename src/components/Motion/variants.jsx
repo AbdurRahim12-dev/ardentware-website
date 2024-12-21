@@ -22,14 +22,14 @@ export const itemVariants = {
 
 export const imageVariants = {
   initial: {
-    filter: "blur(20px)",
+    filter: "blur(8px)",
     scale: 1.1,
   },
   animate: {
     filter: "blur(0px)",
     scale: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.9,
       ease: "easeOut",
     },
   },

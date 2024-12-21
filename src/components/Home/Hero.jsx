@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { containerVariants, imageVariants, itemVariants } from "../../Motion/variants";
+import { containerVariants, imageVariants, itemVariants } from "../Motion/variants";
 import { BiRightArrow } from "react-icons/bi";
 
 const Hero = () => {
@@ -36,15 +36,15 @@ const Hero = () => {
   const [activeContent, setActiveContent] = useState(data[0]);
 
   // Auto-slide functionality
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const currentIndex = data.findIndex((item) => item.name === activeContent.name);
-      const nextIndex = (currentIndex + 1) % data.length;
-      setActiveContent(data[nextIndex]);
-    }, 8000);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     const currentIndex = data.findIndex((item) => item.name === activeContent.name);
+  //     const nextIndex = (currentIndex + 1) % data.length;
+  //     setActiveContent(data[nextIndex]);
+  //   }, 7000);
 
-    return () => clearInterval(timer);
-  }, [activeContent, data]);
+  //   return () => clearInterval(timer);
+  // }, [activeContent, data]);
 
   return (
     <section className="relative overflow-hidden">
