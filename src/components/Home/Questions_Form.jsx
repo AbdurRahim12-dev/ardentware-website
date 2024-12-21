@@ -122,7 +122,7 @@ const Questions_Form = () => {
                   <select
                     id={field.name}
                     {...register(field.name, field.validation)}
-                    className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-3 px-3 shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary bg-orange-50"
+                    className="mt-1 block w-full rounded-md border border-gray-300 py-3 px-3 shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary bg-orange-50"
                   >
                     <option value="">{field.placeholder}</option>
                     {field.options.map((option) => (
