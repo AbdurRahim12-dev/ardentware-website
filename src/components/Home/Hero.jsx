@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { containerVariants, imageVariants, itemVariants } from "../Motion/variants";
 import { BiRightArrow } from "react-icons/bi";
@@ -12,7 +12,7 @@ const Hero = () => {
         description:
           "The next generation of hyper-personalized, dynamic experiences for customers, employees and citizens. AI-powered, end-to-end transformation—shaping tomorrow's experiences—today.",
         button: "Find Out More",
-        image: "https://cognizant.scene7.com/is/image/cognizant/hp-cybersecurity-hero-desktop",
+        image: "/images/hero_bg_1.webp",
       },
       {
         name: "Neuro Cybersecurity",
@@ -20,7 +20,7 @@ const Hero = () => {
         description:
           "It's the trillion dollar question. As gen AI improves productivity and disrupts job roles and the talent pyramid, business leaders must align workforce strategies with the evolving landscape.",
         button: "Submit",
-        image: "https://cognizant.scene7.com/is/image/cognizant/hp-ai-impact-hero-desktop",
+        image: "/images/hero_bg_2.webp",
       },
       {
         name: "Ai Adoption",
@@ -28,7 +28,7 @@ const Hero = () => {
         description:
           "Cognizant Neuro® Cybersecurity revolutionizes risk management, threat and vulnerability management and compliance assurance—by integrating and orchestrating point solutions to ensure comprehensive security coverage using AI.",
         button: "Get The Details",
-        image: "https://cognizant.scene7.com/is/image/cognizant/hp-hero-cognizant-moment-desktop",
+        image: "/images/hero_bg_3.webp",
       },
     ];
   }, []);
@@ -36,38 +36,44 @@ const Hero = () => {
   const [activeContent, setActiveContent] = useState(data[0]);
 
   // Auto-slide functionality
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     const currentIndex = data.findIndex((item) => item.name === activeContent.name);
-  //     const nextIndex = (currentIndex + 1) % data.length;
-  //     setActiveContent(data[nextIndex]);
-  //   }, 7000);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const currentIndex = data.findIndex((item) => item.name === activeContent.name);
+      const nextIndex = (currentIndex + 1) % data.length;
+      setActiveContent(data[nextIndex]);
+    }, 3000);
 
-  //   return () => clearInterval(timer);
-  // }, [activeContent, data]);
+    return () => clearInterval(timer);
+  }, [activeContent, data]);
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden h-[600px] bg-primary">
       <AnimatePresence mode="wait">
         <motion.div
           key={activeContent.image}
-          initial="initial"
-          animate="animate"
+          initial="hidden"
+          animate="visible"
+          exit="exit"
           variants={imageVariants}
-          className="w-full h-full"
+          className="absolute inset-0"
         >
-          <img src={activeContent.image} alt={activeContent.name} className="w-full object-cover" />
+          <img
+            src={activeContent.image}
+            alt={activeContent.name}
+            className="w-full h-full object-cover"
+          />
         </motion.div>
       </AnimatePresence>
 
-      <div className="container text-left text-white flex absolute inset-0 items-center">
+      <div className="container text-left text-white absolute inset-0 flex items-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeContent.name}
             initial="hidden"
             animate="visible"
+            exit="exit"
             variants={containerVariants}
-            className="w-full sm:w-10/12 lg:w-7/12 z-[1] space-y-5"
+            className="w-full sm:w-10/12 lg:w-7/12 z-10 space-y-5"
           >
             <motion.h1 variants={itemVariants} className="text-6xl leading-tight font-semibold">
               {activeContent.title}
@@ -77,22 +83,23 @@ const Hero = () => {
             </motion.p>
             <motion.button
               variants={itemVariants}
-              className="bg-secondary text-primary font-semibold px-3 py-2 rounded-full hover:bg-secondary/70 duration-300 inline-flex items-center"
+              className="bg-secondary text-primary font-semibold px-3 py-2 rounded-full hover:bg-secondary/70 duration-300 inline-flex items-center gap-2"
             >
               {activeContent.button} <BiRightArrow />
             </motion.button>
           </motion.div>
         </AnimatePresence>
+
         <div className="flex space-x-4 absolute bottom-8">
           {data.map((menu, index) => {
             const isActive = activeContent.name === menu.name;
             return (
-              <div key={index + 1} className="relative group z-[5]">
+              <div key={index} className="relative group z-10">
                 <button
-                  className={`font-semibold text-lg px-3 ${isActive ? "text-secondary" : ""}`}
-                  onClick={() => {
-                    setActiveContent(menu);
-                  }}
+                  className={`font-semibold text-lg px-3 transition-colors duration-300 ${
+                    isActive ? "text-secondary" : ""
+                  }`}
+                  onClick={() => setActiveContent(menu)}
                 >
                   {menu.name}
                 </button>
@@ -100,7 +107,7 @@ const Hero = () => {
                   className={`absolute -bottom-2 h-[3px] bg-white opacity-50 transition-all duration-500 ease-in-out group-hover:w-full group-hover:left-0 ${
                     isActive ? "left-0 w-full" : "left-1/2 w-0"
                   }`}
-                ></span>
+                />
               </div>
             );
           })}
