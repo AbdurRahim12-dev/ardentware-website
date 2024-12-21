@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <section className="container">
-      <nav className="flex items-center justify-between">
+      <nav className="flex items-center justify-between pb-1">
         <div className="flex items-center">
           {/* <img src="https://via.placeholder.com/150" alt="logo" /> */}
           <h2 className="text-2xl">ARDENTWARE</h2>
@@ -11,7 +11,7 @@ const Navbar = () => {
                 <li key={index + 1} className="">
                   <a
                     href="#"
-                    className="text-primary text-lg py-4 px-3 hover:bg-primary hover:text-white duration-500 font-semibold"
+                    className="text-primary text-lg py-5 px-3 hover:bg-primary hover:text-white duration-500 font-semibold"
                   >
                     {item}
                   </a>
@@ -22,9 +22,9 @@ const Navbar = () => {
         </div>
         <div>
           <div className="relative">
-            <label htmlFor="Search" className="sr-only">
+            {/* <label htmlFor="Search" className="sr-only">
               Search
-            </label>
+            </label> */}
 
             <input
               type="text"
