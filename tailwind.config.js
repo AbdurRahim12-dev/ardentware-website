@@ -2,14 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    colors: {
-      primary: "#020048",
-      secondary: "#27EFE9",
-      accent: "#2f78c4",
-      black: "#000",
-      white: "#fff",
-    },
     extend: {
+      colors: {
+        primary: "#020048",
+        secondary: "#27EFE9",
+        accent: "#2f78c4",
+        black: "#000",
+        white: "#fff",
+      },
       container: {
         center: true,
         padding: "0.5rem",
