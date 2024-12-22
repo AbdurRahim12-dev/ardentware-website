@@ -21,7 +21,7 @@ const Footer = () => {
   return (
     <section className="bg-[#E8E8E6] py-6">
       {/* Social Media Link */}
-      <div className="container flex items-center justify-between">
+      <div className="container flex flex-col md:flex-row gap-3 items-center justify-between">
         <div className="text-accent text-3xl flex items-center gap-4">
           {mediaLogo.map((item) => (
             <div key={item.id}>{item.icon}</div>

@@ -15,7 +15,7 @@ const Press_Release = () => {
         </div>
       </div>
       <div className="container py-10">
-        <h4 className="text-4xl font-extralight text-primary/90 leading-tight">
+        <h4 className="text-2xl md:text-3xl lg:text-4xl font-extralight text-primary/90 leading-tight">
           Cognizant helps companies modernize{" "}
           <span className="font-bold text-accent">technology</span>, <br /> reimagine{" "}
           <span className="font-bold text-accent">processes</span> and transform{" "}

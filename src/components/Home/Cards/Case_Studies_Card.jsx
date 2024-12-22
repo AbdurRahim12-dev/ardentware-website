@@ -26,7 +26,7 @@ const Case_Studies_Card = ({ data }) => {
               <span className="uppercase text-lg underline underline-offset-[15px]">
                 {category}
               </span>
-              <h3 className="mt-6 text-3xl font-semibold text-secondary">{title}</h3>
+              <h3 className="mt-6 text-3xl font-semibold text-secondary line-clamp-2">{title}</h3>
             </motion.div>
           ) : (
             <motion.div

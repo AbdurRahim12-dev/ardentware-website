@@ -57,7 +57,7 @@ function App() {
       >
         <button
           onClick={scrollToTop}
-          className="flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-white shadow-md hover:bg-primary/80 focus:outline-none"
+          className="hidden lg:flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-white shadow-md hover:bg-primary/80 focus:outline-none"
         >
           <span>Back to top</span>
           <BiRightArrow className="-rotate-90" />
