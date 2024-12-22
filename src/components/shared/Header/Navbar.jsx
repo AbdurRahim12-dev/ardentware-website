@@ -3,6 +3,7 @@ import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
 import { RiSearchLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [mobileMenuShow, setMobileMenuShow] = useState(false);
@@ -28,12 +29,12 @@ const Navbar = () => {
             {["Industries", "Services", "Products", "Resources"].map((item, index) => {
               return (
                 <li key={index + 1} className="">
-                  <a
-                    href="#"
+                  <Link
+                    to="/service"
                     className="text-primary text-lg py-5 px-3 hover:bg-primary hover:text-white duration-500 font-semibold"
                   >
                     {item}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
