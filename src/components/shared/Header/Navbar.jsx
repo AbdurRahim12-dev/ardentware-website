@@ -1,11 +1,30 @@
+import { AnimatePresence, motion } from "motion/react";
+import { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoCloseSharp } from "react-icons/io5";
+import { RiSearchLine } from "react-icons/ri";
+
 const Navbar = () => {
+  const [mobileMenuShow, setMobileMenuShow] = useState(false);
   return (
     <section className="container">
-      <nav className="flex items-center justify-between pb-1">
+      <nav className="flex items-center justify-between py-3 lg:py-0 lg:pb-1">
         <div className="flex items-center">
           {/* <img src="https://via.placeholder.com/150" alt="logo" /> */}
+          {/* For mobile menu button */}
+          <div className="lg:hidden flex items-center gap-2 mr-2">
+            {mobileMenuShow ? (
+              <button onClick={() => setMobileMenuShow(!mobileMenuShow)}>
+                <IoCloseSharp className="text-2xl" />
+              </button>
+            ) : (
+              <button onClick={() => setMobileMenuShow(!mobileMenuShow)}>
+                <GiHamburgerMenu className="text-2xl" />
+              </button>
+            )}
+          </div>
           <h2 className="text-2xl">ARDENTWARE</h2>
-          <ul className="flex items-center ml-8">
+          <ul className="hidden lg:flex items-center ml-8">
             {["Industries", "Services", "Products", "Resources"].map((item, index) => {
               return (
                 <li key={index + 1} className="">
@@ -22,10 +41,6 @@ const Navbar = () => {
         </div>
         <div>
           <div className="relative">
-            {/* <label htmlFor="Search" className="sr-only">
-              Search
-            </label> */}
-
             <input
               type="text"
               id="Search"
@@ -36,26 +51,38 @@ const Navbar = () => {
             <span className="absolute inset-y-0 end-0 grid w-12 place-content-center">
               <button type="button" className="text-gray-600 hover:text-gray-700">
                 <span className="sr-only">Search</span>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-                  />
-                </svg>
+                <RiSearchLine />
               </button>
             </span>
           </div>
         </div>
       </nav>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {mobileMenuShow && (
+          <motion.div
+            initial={{ x: "-100%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: "-100%", opacity: 0 }}
+            transition={{ type: "spring", damping: 25, stiffness: 150 }}
+            className="bg-white z-50 absolute w-full left-0"
+          >
+            <ul className="text-primary text-2xl">
+              {["Industries", "Services", "Products", "Resources"].map((item, index) => {
+                return (
+                  <li
+                    key={index + 1}
+                    className="py-5 px-3 hover:bg-primary hover:text-white duration-500 font-semibold cursor-pointer"
+                  >
+                    {item}
+                  </li>
+                );
+              })}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

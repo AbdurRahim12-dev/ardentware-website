@@ -25,7 +25,7 @@ const MiniHeader = () => {
     },
   ];
   return (
-    <section className="container">
+    <section className="container hidden lg:block">
       <div className="flex items-center justify-end py-2 text-primary text-sm">
         {MenuItems.map((item, index) => {
           return (
