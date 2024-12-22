@@ -197,6 +197,11 @@ const Questions_Form = () => {
           </button>
         </div>
       </form>
+      <p className="mt-5 text-primary text-xl">
+        This site is protected by reCAPTCHA and the Google{" "}
+        <span className="text-accent font-bold underline">Privacy Policy</span> and{" "}
+        <span className="text-accent font-bold underline">Terms of Service</span> apply.
+      </p>
     </section>
   );
 };

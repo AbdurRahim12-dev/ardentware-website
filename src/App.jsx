@@ -12,6 +12,7 @@ import Drive_Career from "./components/Home/Drive_Career";
 import Questions_Form from "./components/Home/Questions_Form";
 import { BiRightArrow } from "react-icons/bi";
 import { IoMdClose } from "react-icons/io";
+import Footer from "./components/shared/Footer/Footer";
 
 function App() {
   const [showButtons, setShowButtons] = useState(false);
@@ -46,6 +47,7 @@ function App() {
       <News />
       <Drive_Career />
       <Questions_Form />
+      <Footer />
 
       {/* Back to top button */}
       <div
@@ -86,7 +88,7 @@ function App() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsModalOpen(false)}
-              className="fixed inset-0 bg-black/50 z-40"
+              className="fixed inset-0 bg-primary/60 z-40"
             />
 
             {/* Modal */}
@@ -94,10 +96,10 @@ function App() {
               initial={{ x: "100%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: "100%", opacity: 0 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              transition={{ type: "spring", damping: 25, stiffness: 150 }}
               className="fixed inset-0 flex items-center justify-center z-50"
             >
-              <div className="relative bg-white w-full mx-4 p-6 rounded-lg shadow-xl">
+              <div className="relative bg-white w-full mx-2 md:mx-10 p-6 rounded-lg shadow-xl">
                 <div className="absolute top-4 right-4 p-4">
                   <button
                     onClick={() => setIsModalOpen(false)}
