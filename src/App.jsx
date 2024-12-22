@@ -1,18 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import MiniHeader from "./components/shared/Header/MiniHeader";
-import Navbar from "./components/shared/Header/Navbar";
-import Hero from "./components/Home/Hero";
-import Press_Release from "./components/Home/Press_Release";
-import Driving_Future from "./components/Home/Driving_Future";
-import Case_Studies from "./components/Home/Case_Studies";
-import Pertnering from "./components/Home/Pertnering";
-import News from "./components/Home/News";
-import Drive_Career from "./components/Home/Drive_Career";
 import Questions_Form from "./components/Home/Questions_Form";
 import { BiRightArrow } from "react-icons/bi";
 import { IoMdClose } from "react-icons/io";
-import Footer from "./components/shared/Footer/Footer";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./components/routes/routes";
 
 function App() {
   const [showButtons, setShowButtons] = useState(false);
@@ -37,17 +29,7 @@ function App() {
 
   return (
     <>
-      <MiniHeader />
-      <Navbar />
-      <Hero />
-      <Press_Release />
-      <Driving_Future />
-      <Case_Studies />
-      <Pertnering />
-      <News />
-      <Drive_Career />
-      <Questions_Form />
-      <Footer />
+      <RouterProvider router={router} />
 
       {/* Back to top button */}
       <div
