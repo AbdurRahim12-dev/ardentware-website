@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
-import { RouterProvider } from "react-router-dom";
-import { router } from "./components/routes/routes";
-import ContactModal from "./components/Home/ContactModal";
-import BackTopButton from "./components/shared/BackTop/BackTopButton";
+import { useState, useEffect } from 'react';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './components/routes/routes';
+import ContactModal from './components/Home/ContactModal';
+import BackTopButton from './components/shared/BackTop/BackTopButton';
 
 function App() {
   const [showButtons, setShowButtons] = useState(false);
@@ -13,8 +13,8 @@ function App() {
       setShowButtons(scrollPosition > 100);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (

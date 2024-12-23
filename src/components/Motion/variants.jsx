@@ -4,14 +4,14 @@ export const containerVariants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.2,
-      when: "beforeChildren",
+      when: 'beforeChildren',
     },
   },
   exit: {
     opacity: 0,
     transition: {
       duration: 0.1,
-      when: "afterChildren",
+      when: 'afterChildren',
       staggerChildren: 0,
       staggerDirection: -1,
     },
@@ -25,7 +25,7 @@ export const itemVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeOut",
+      ease: 'easeOut',
     },
   },
   exit: {
@@ -33,7 +33,7 @@ export const itemVariants = {
     y: -20,
     transition: {
       duration: 0.3,
-      ease: "easeIn",
+      ease: 'easeIn',
     },
   },
 };
@@ -42,24 +42,24 @@ export const imageVariants = {
   hidden: {
     opacity: 0,
     scale: 1.1,
-    filter: "blur(8px)",
+    filter: 'blur(8px)',
   },
   visible: {
     opacity: 1,
     scale: 1,
-    filter: "blur(0px)",
+    filter: 'blur(0px)',
     transition: {
       duration: 0.8,
-      ease: "easeOut",
+      ease: 'easeOut',
     },
   },
   exit: {
     opacity: 0,
     scale: 1.1,
-    filter: "blur(8px)",
+    filter: 'blur(8px)',
     transition: {
       duration: 0.3,
-      ease: "easeIn",
+      ease: 'easeIn',
     },
   },
 };

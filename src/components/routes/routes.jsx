@@ -1,19 +1,19 @@
-import { createBrowserRouter } from "react-router-dom";
-import Main from "../../layout/Main";
-import HomePage from "../../pages/HomePage";
-import ServicesPage from "../../pages/ServicesPage";
+import { createBrowserRouter } from 'react-router-dom';
+import Main from '../../layout/Main';
+import HomePage from '../../pages/HomePage';
+import ServicesPage from '../../pages/ServicesPage';
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Main />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <HomePage />,
       },
       {
-        path: "/service",
+        path: '/service',
         element: <ServicesPage />,
       },
     ],

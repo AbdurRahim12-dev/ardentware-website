@@ -3,61 +3,61 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Gellix";
-  src: url("../assets/fonts/Gellix-Thin.woff2") format("woff2");
+  font-family: 'Gellix';
+  src: url('../assets/fonts/Gellix-Thin.woff2') format('woff2');
   font-weight: 200; /* Extra Light */
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gellix";
-  src: url("../assets/fonts/Gellix-Light.woff2") format("woff2");
+  font-family: 'Gellix';
+  src: url('../assets/fonts/Gellix-Light.woff2') format('woff2');
   font-weight: 300; /* Light */
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gellix";
-  src: url("../assets/fonts/Gellix-Regular.woff2") format("woff2");
+  font-family: 'Gellix';
+  src: url('../assets/fonts/Gellix-Regular.woff2') format('woff2');
   font-weight: 400; /* Regular */
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gellix";
-  src: url("../assets/fonts/Gellix-Medium.woff2") format("woff2");
+  font-family: 'Gellix';
+  src: url('../assets/fonts/Gellix-Medium.woff2') format('woff2');
   font-weight: 500; /* Medium */
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gellix";
-  src: url("../assets/fonts/Gellix-SemiBold.woff2") format("woff2");
+  font-family: 'Gellix';
+  src: url('../assets/fonts/Gellix-SemiBold.woff2') format('woff2');
   font-weight: 600; /* Semi Bold */
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gellix";
-  src: url("../assets/fonts/Gellix-Bold.woff2") format("woff2");
+  font-family: 'Gellix';
+  src: url('../assets/fonts/Gellix-Bold.woff2') format('woff2');
   font-weight: 700; /* Bold */
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gellix";
-  src: url("../assets/fonts/Gellix-ExtraBold.woff2") format("woff2");
+  font-family: 'Gellix';
+  src: url('../assets/fonts/Gellix-ExtraBold.woff2') format('woff2');
   font-weight: 800; /* Extra Bold */
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gellix";
-  src: url("../assets/fonts/Gellix-Black.woff2") format("woff2");
+  font-family: 'Gellix';
+  src: url('../assets/fonts/Gellix-Black.woff2') format('woff2');
   font-weight: 900; /* Black */
   font-style: normal;
 }
 
 body {
-  font-family: "Gellix", sans-serif;
+  font-family: 'Gellix', sans-serif;
 }
