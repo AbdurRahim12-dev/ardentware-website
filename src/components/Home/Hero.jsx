@@ -8,9 +8,9 @@ const Hero = () => {
     return [
       {
         name: 'Age of gen Ai',
-        title: 'Accelerate and orchestrate experience',
-        description:
-          "The next generation of hyper-personalized, dynamic experiences for customers, employees and citizens. AI-powered, end-to-end transformation—shaping tomorrow's experiences—today.",
+        title: 'Empowering Businesses with Digital-First, Cloud-First, and AI-Driven IT Solutions',
+        // description:
+        //   "The next generation of hyper-personalized, dynamic experiences for customers, employees and citizens. AI-powered, end-to-end transformation—shaping tomorrow's experiences—today.",
         button: 'Find Out More',
         image: '/images/hero_bg_1.webp',
         mobileImage:
@@ -18,22 +18,22 @@ const Hero = () => {
       },
       {
         name: 'Neuro Cybersecurity',
-        title: 'What to do with the workforce in the age of generative AI?',
-        description:
-          "It's the trillion dollar question. As gen AI improves productivity and disrupts job roles and the talent pyramid, business leaders must align workforce strategies with the evolving landscape.",
+        title: 'Empowering Businesses with Digital-First, Cloud-First, and AI-Driven IT Solutions',
+        // description:
+        //   "It's the trillion dollar question. As gen AI improves productivity and disrupts job roles and the talent pyramid, business leaders must align workforce strategies with the evolving landscape.",
         button: 'Submit',
         image: '/images/hero_bg_2.webp',
         mobileImage: 'https://cognizant.scene7.com/is/image/cognizant/hp-cybersecurity-hero-tablet',
       },
-      {
-        name: 'Ai Adoption',
-        title: 'Cybersecurity and compliance orchestration with AI',
-        description:
-          'Cognizant Neuro® Cybersecurity revolutionizes risk management, threat and vulnerability management and compliance assurance—by integrating and orchestrating point solutions to ensure comprehensive security coverage using AI.',
-        button: 'Get The Details',
-        image: '/images/hero_bg_3.webp',
-        mobileImage: 'https://cognizant.scene7.com/is/image/cognizant/hp-ai-impact-hero-tablet',
-      },
+      // {
+      //   name: 'Ai Adoption',
+      //   title: 'Cybersecurity and compliance orchestration with AI',
+      //   // description:
+      //   //   'Cognizant Neuro® Cybersecurity revolutionizes risk management, threat and vulnerability management and compliance assurance—by integrating and orchestrating point solutions to ensure comprehensive security coverage using AI.',
+      //   button: 'Get The Details',
+      //   image: '/images/hero_bg_3.webp',
+      //   mobileImage: 'https://cognizant.scene7.com/is/image/cognizant/hp-ai-impact-hero-tablet',
+      // },
     ];
   }, []);
 

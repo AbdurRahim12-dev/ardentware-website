@@ -94,8 +94,8 @@ const Questions_Form = () => {
   return (
     <section className='container py-16'>
       <Header_Text
-        title=' Get answers to your questions'
-        description='Our clients turn to us to help them reimagine ways of working with technology.'
+        title='How can we help you?'
+        description='Our clients rely on us to redefine their technology-driven workflows.'
       />
 
       <form onSubmit={handleSubmit(onSubmit)} className='mt-10'>
