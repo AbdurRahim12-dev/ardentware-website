@@ -8,7 +8,7 @@ const ContactModal = ({ showButtons }) => {
   return (
     <>
       <div
-        className={`fixed top-1/2 -right-10 rotate-90 transition-opacity duration-300 ${
+        className={`fixed top-1/2 -right-10 rotate-90 transition-opacity duration-300  ${
           showButtons ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >
@@ -30,7 +30,7 @@ const ContactModal = ({ showButtons }) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsModalOpen(false)}
-              className='fixed inset-0 bg-primary/60 z-40'
+              className='fixed inset-0 bg-primary/60 z-40 '
             />
 
             {/* Modal */}

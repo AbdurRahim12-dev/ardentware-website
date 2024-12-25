@@ -67,6 +67,9 @@ const Hero = () => {
               src={activeContent.image}
               alt={activeContent.name}
               className='w-full h-full object-cover'
+              loading='lazy'
+              // decoding='async'
+              srcSet={activeContent.image}
             />
           </picture>
         </motion.div>

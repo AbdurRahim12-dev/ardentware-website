@@ -7,6 +7,7 @@ import BackTopButton from './components/shared/BackTop/BackTopButton';
 function App() {
   const [showButtons, setShowButtons] = useState(false);
 
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -16,6 +17,7 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
 
   return (
     <>

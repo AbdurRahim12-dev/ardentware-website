@@ -17,6 +17,7 @@ const Questions_Form = () => {
       validation: {
         required: 'Name is required',
       },
+      placeholder: 'Name',
     },
     {
       name: 'email',
@@ -29,6 +30,7 @@ const Questions_Form = () => {
           message: 'Invalid email address',
         },
       },
+      placeholder: 'Email',
     },
     {
       name: 'organization',
@@ -37,6 +39,7 @@ const Questions_Form = () => {
       validation: {
         required: 'Organization is required',
       },
+      placeholder: 'Organization',
     },
     {
       name: 'contactNumber',
@@ -49,6 +52,7 @@ const Questions_Form = () => {
           message: 'Invalid phone number',
         },
       },
+      placeholder: 'Contact Number',
     },
     {
       name: 'region',
@@ -107,7 +111,7 @@ const Questions_Form = () => {
 
             return (
               <div key={field.name} className='col-span-1'>
-                {field.type !== 'select' && (
+                {/* {field.type !== 'select' && (
                   <label
                     htmlFor={field.name}
                     className='block text-sm font-medium text-gray-700 mb-1'
@@ -116,8 +120,28 @@ const Questions_Form = () => {
                       field.name.slice(1).replace(/([A-Z])/g, ' $1')}
                     {field.required && <span className='text-red-500'>*</span>}
                   </label>
-                )}
+                )} */}
 
+                {/* <div class='relative'>
+                  <input
+                    type='text'
+                    id={field.name}
+                    placeholder=''
+                    {...register(field.name, field.validation)}
+                    className='peer w-full rounded-lg border border-gray-200 px-4 pb-2 pt-6 text-base outline-none transition-all focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary  bg-orange-50'
+                    onfocus={() => (field.placeholder = field.name)}
+                    onblur={() => (field.placeholder = '')}
+                  />
+                  <label
+                    for={field.name}
+                    className='absolute left-4 top-4 z-10 origin-[0] -translate-y-3 scale-75 transform text-gray-500 duration-200 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-blue-500'
+                  >
+                    {' '}
+                    {field.name.charAt(0).toUpperCase() +
+                      field.name.slice(1).replace(/([A-Z])/g, ' $1')}
+                       {field.required && <span className='text-red-500'>*</span>}
+                  </label>
+                </div> */}
                 {field.type === 'select' ? (
                   <select
                     id={field.name}
@@ -132,14 +156,25 @@ const Questions_Form = () => {
                     ))}
                   </select>
                 ) : (
-                  <input
-                    type={field.type}
-                    id={field.name}
-                    placeholder={field.placeholder}
-                    {...register(field.name, field.validation)}
-                    className='mt-1 block w-full rounded-md border border-gray-300 py-3 px-3 shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary bg-orange-50'
-                  />
+                  <div className='relative'>
+                    <input
+                      type='text'
+                      id={field.name}
+                      placeholder='' // Empty placeholder to trigger floating label behavior
+                      {...register(field.name, field.validation)}
+                      className='peer w-full rounded-lg border border-gray-200 px-4 pb-2 pt-6 text-base outline-none transition-all focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary bg-orange-50'
+                    />
+                    <label
+                      htmlFor={field.name}
+                      className='absolute left-4 top-4 z-10 origin-[0] -translate-y-3 scale-75 transform text-gray-500 duration-200 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-blue-500'
+                    >
+                      {field.name.charAt(0).toUpperCase() +
+                        field.name.slice(1).replace(/([A-Z])/g, ' $1')}
+                      {field.required && <span className='text-red-500'>*</span>}
+                    </label>
+                  </div>
                 )}
+
                 {errors[field.name] && (
                   <p className='mt-1 text-sm text-red-600'>{errors[field.name].message}</p>
                 )}
@@ -149,20 +184,38 @@ const Questions_Form = () => {
         </div>
 
         {/* Message textarea - full width */}
-        <div className='mt-6'>
-          <label htmlFor='message' className='block text-sm font-medium text-gray-700 mb-1'>
+        <div class='relative'>
+          <textarea
+            id='message'
+            placeholder=''
+            rows={4}
+            className='peer w-full rounded-lg border border-gray-200 px-4 pb-2 pt-6 text-base outline-none transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 bg-orange-50 mt-5'
+            onfocus="this.placeholder='Message'"
+            onblur="this.placeholder=''"
+          />
+          <label
+            for='message'
+            className='absolute left-4 top-4 z-10 origin-[0] -translate-y-3 scale-75 transform text-gray-500 duration-200 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-blue-500 py-4'
+          >
+            {' '}
+            Message
+          </label>
+        </div>
+        {/* <div className='mt-6'>
+          <label htmlFor='message' className='block text-sm font-bold text-gray-700 mb-1'>
             Message
           </label>
           <textarea
             id='message'
             {...register('message')}
             rows={4}
+            placeholder='Message'
             className='mt-1 block w-full rounded-md border border-gray-300 py-3 px-3 shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary bg-orange-50'
           />
-        </div>
+        </div> */}
 
         {/* Checkbox - full width */}
-        <div className='mt-6'>
+        {/* <div className='mt-6'>
           <div className='flex items-start'>
             <div className='flex items-center h-6'>
               <input
@@ -186,7 +239,7 @@ const Questions_Form = () => {
               )}
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className='mt-8'>
           <button
@@ -197,11 +250,11 @@ const Questions_Form = () => {
           </button>
         </div>
       </form>
-      <p className='mt-5 text-primary text-xl'>
+      {/* <p className='mt-5 text-primary text-xl'>
         This site is protected by reCAPTCHA and the Google{' '}
         <span className='text-accent font-bold underline'>Privacy Policy</span> and{' '}
         <span className='text-accent font-bold underline'>Terms of Service</span> apply.
-      </p>
+      </p> */}
     </section>
   );
 };

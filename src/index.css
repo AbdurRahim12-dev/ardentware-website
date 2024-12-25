@@ -58,6 +58,22 @@
   font-style: normal;
 }
 
+/* font goldplay */
+@font-face {
+  font-family: 'Goldplay';
+  src: url('../assets/fonts/goldplay-semibold.woff2') format('woff2');
+  font-weight: 600; /* Semibold */
+  font-style: normal;
+}
+/* font goldplay alt*/
+@font-face {
+  font-family: 'GoldplayAlt';
+  src: url('../assets/fonts/goldplay-alt-bold.otf') format('otf');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
 body {
   font-family: 'Gellix', sans-serif;
+  /* font-family: 'GoldplayAlt', sans-serif; */
 }

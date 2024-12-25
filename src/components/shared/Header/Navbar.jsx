@@ -4,43 +4,56 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoCloseSharp } from 'react-icons/io5';
 import { RiSearchLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
+import logo from '../../../assets/logo.png';
 
 const Navbar = () => {
   const [mobileMenuShow, setMobileMenuShow] = useState(false);
   return (
-    <section className='container'>
-      <nav className='flex items-center justify-between py-3 lg:py-0 lg:pb-1'>
-        <div className='flex items-center'>
-          {/* <img src="https://via.placeholder.com/150" alt="logo" /> */}
-          {/* For mobile menu button */}
-          <div className='lg:hidden flex items-center gap-2 mr-2'>
-            {mobileMenuShow ? (
-              <button onClick={() => setMobileMenuShow(!mobileMenuShow)}>
-                <IoCloseSharp className='text-2xl' />
-              </button>
-            ) : (
-              <button onClick={() => setMobileMenuShow(!mobileMenuShow)}>
-                <GiHamburgerMenu className='text-2xl' />
-              </button>
-            )}
-          </div>
-          <h2 className='text-2xl'>ARDENTWARE</h2>
-          <ul className='hidden lg:flex items-center ml-8'>
-            {['Industries', 'Services', 'Products', 'Resources'].map((item, index) => {
-              return (
-                <li key={index + 1} className=''>
-                  <Link
-                    to='/service'
-                    className='text-primary text-lg py-5 px-3 hover:bg-primary hover:text-white duration-500 font-semibold'
-                  >
-                    {item}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+    <section className=' sticky top-0 z-50 bg-white w-full'>
+      <nav className='container flex items-center justify-between align-middle py-3 lg:py-0 lg:pb-1'>
+        {/* <h2 className='text-2xl'>ARDENTWARE</h2> */}
+        {/* Logo */}
+        <Link to='/'>
+          <img
+           priority="true"
+            src={logo}
+            srcSet={`${logo} 300w, ${logo} 600w, ${logo} 900w`}
+            alt='logo'
+            width={176}
+            height={44}
+            className='mx-auto my-auto align-middle'
+            loading='lazy'
+          />
+        </Link>
+
+        {/* For mobile menu button */}
+        <div className='lg:hidden flex items-center gap-2 mr-2'>
+          {mobileMenuShow ? (
+            <button onClick={() => setMobileMenuShow(!mobileMenuShow)}>
+              <IoCloseSharp className='text-2xl' />
+            </button>
+          ) : (
+            <button onClick={() => setMobileMenuShow(!mobileMenuShow)}>
+              <GiHamburgerMenu className='text-2xl' />
+            </button>
+          )}
         </div>
-        <div>
+        <ul className='hidden lg:flex items-center  mt-2'>
+          {menuItems.map((item, index) => {
+            return (
+              <li key={index + 1} className=''>
+                <Link
+                  to={item.link}
+                  className='text-primary text-lg py-4 px-3 hover:bg-primary hover:text-white duration-500 font-semibold'
+                >
+                  {item.name}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+
+        {/* <div>
           <div className='relative'>
             <input
               type='text'
@@ -56,7 +69,7 @@ const Navbar = () => {
               </button>
             </span>
           </div>
-        </div>
+        </div> */}
       </nav>
 
       {/* Mobile menu */}
@@ -69,14 +82,14 @@ const Navbar = () => {
             transition={{ type: 'spring', damping: 25, stiffness: 150 }}
             className='bg-white z-50 absolute w-full left-0'
           >
-            <ul className='text-primary text-2xl'>
-              {['Industries', 'Services', 'Products', 'Resources'].map((item, index) => {
+            <ul className='text-primary text-xl p-0'>
+              {menuItems.map((item, index) => {
                 return (
                   <li
                     key={index + 1}
                     className='py-5 px-3 hover:bg-primary hover:text-white duration-500 font-semibold cursor-pointer'
                   >
-                    {item}
+                    <Link to={item.link} onClick={() => setMobileMenuShow(false)}>{item.name}</Link>
                   </li>
                 );
               })}
@@ -89,3 +102,26 @@ const Navbar = () => {
 };
 
 export default Navbar;
+// 'Industries', 'Services', 'Products', 'Resources'
+const menuItems = [
+  {
+    name: 'Industries',
+    link: '/industries',
+  },
+  {
+    name: 'Services',
+    link: '/service',
+  },
+  {
+    name: 'Products',
+    link: '/products',
+  },
+  {
+    name: 'Resources',
+    link: '/resources',
+  },
+  {
+    name: 'Contact Us',
+    link: '/contact',
+  }
+];

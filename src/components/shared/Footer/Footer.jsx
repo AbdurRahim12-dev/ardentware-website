@@ -16,7 +16,7 @@ const Footer = () => {
     'SiteMap',
     'Terms',
     'Privacy Notice',
-    `©${new Date().getFullYear()} Cognizant, all rights reserved.`,
+    `©${new Date().getFullYear()} Ardentware, all rights reserved.`,
   ];
   return (
     <section className='bg-[#E8E8E6] py-6'>
@@ -28,7 +28,7 @@ const Footer = () => {
           ))}
         </div>
         {/* Navigation Links */}
-        <div className='flex items-center gap-4 text-primary text-sm'>
+        <div className='flex flex-wrap gap-2 justify-center'>
           {navItems.map((item, index) => (
             <span key={index}>{item}</span>
           ))}

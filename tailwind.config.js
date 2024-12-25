@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         gellix: ['Gellix', 'sans-serif'],
+        goldplay: ['Goldplay', 'sans-serif'],
       },
       colors: {
         primary: '#020048',
