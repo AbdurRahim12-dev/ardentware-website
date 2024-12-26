@@ -44,6 +44,7 @@ export default function SoftwareDrivenCard({ title, description, video }) {
         muted
         preload='metadata'
         playsInline
+        loading='lazy'
         className='absolute inset-0 w-full h-full object-cover duration-500'
       >
         <source src={video} type='video/mp4' srcSet={video} />
