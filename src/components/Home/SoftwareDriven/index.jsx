@@ -1,7 +1,9 @@
 import React, { useMemo } from 'react';
 import SoftwareDrivenCard from './SoftwareDrivenCard';
+import { motion } from 'framer-motion';
 
 export default function SoftwareDriven() {
+
   const data = useMemo(() => {
     return [
       {
@@ -34,13 +36,17 @@ export default function SoftwareDriven() {
   }, []);
   
   return (
-    <div className='grid grid-cols-1 lg:grid-cols-2'>
+    <motion.div 
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.5 }}
+    className='grid grid-cols-1 lg:grid-cols-2'>
       {data.map((item) => (
         <div key={item.title} className=''>
           <SoftwareDrivenCard  {...item} />
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 }
 

@@ -51,7 +51,7 @@ const Hero = () => {
   }, [activeContent, data]);
 
   return (
-    <section className='relative overflow-hidden h-[600px] bg-primary'>
+    <section className='relative overflow-hidden h-[650px] bg-primary'>
       <AnimatePresence mode='wait'>
         <motion.div
           key={activeContent.image}
@@ -87,7 +87,7 @@ const Hero = () => {
           >
             <motion.h1
               variants={itemVariants}
-              className='text-3xl md:text-6xl leading-tight font-semibold'
+              className='text-3xl md:text-6xl font-semibold !leading-tight font-gellix'
             >
               {activeContent.title}
             </motion.h1>
@@ -96,7 +96,7 @@ const Hero = () => {
             </motion.p>
             <motion.button
               variants={itemVariants}
-              className='bg-secondary text-primary font-semibold px-3 py-2 rounded-full hover:bg-secondary/70 duration-300 inline-flex items-center gap-2'
+              className='bg-secondary text-primary font-semibold px-6 py-3 text-center justify-center rounded-full hover:bg-secondary/70 duration-300 inline-flex items-center gap-2 font-gellix'
             >
               {activeContent.button} <BiRightArrow />
             </motion.button>
@@ -109,7 +109,7 @@ const Hero = () => {
             return (
               <div key={index} className='relative group z-10'>
                 <button
-                  className={`font-semibold text-lg px-3 transition-colors duration-300 ${
+                  className={`md:font-semibold text-lg px-4 transition-colors duration-300 font-gellix ${
                     isActive ? 'text-secondary' : ''
                   }`}
                   onClick={() => setActiveContent(menu)}
@@ -125,12 +125,13 @@ const Hero = () => {
             );
           })}
         </div>
+
         <div className='flex lg:hidden space-x-2 absolute bottom-8 left-1/2 transform -translate-x-1/2'>
           {Array.from({ length: data.length }).map((_, index) => {
             return (
               <button
                 key={index}
-                className={`w-8 h-1.5 rounded-sm bg-accent transition-all duration-300 ${
+                className={`w-8 h-1.5 rounded-sm bg-accent transition-all duration-300 font-gellix ${
                   activeContent.name === data[index].name ? 'bg-secondary/80' : ''
                 }`}
                 onClick={() => setActiveContent(data[index])}

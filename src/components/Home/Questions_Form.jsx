@@ -96,13 +96,13 @@ const Questions_Form = () => {
   };
 
   return (
-    <section className='container py-16'>
+    <section className='container md:py-16 mt-10 md:mt-0'>
       <Header_Text
         title='How can we help you?'
         description='Our clients rely on us to redefine their technology-driven workflows.'
       />
 
-      <form onSubmit={handleSubmit(onSubmit)} className='mt-10'>
+      <form onSubmit={handleSubmit(onSubmit)} className='mt-10 '>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
           {formFields.map((field) => {
             if (field.type === 'textarea' || field.type === 'checkbox') {
@@ -146,7 +146,7 @@ const Questions_Form = () => {
                   <select
                     id={field.name}
                     {...register(field.name, field.validation)}
-                    className='mt-1 block w-full rounded-md border border-gray-300 py-3 px-3 shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary bg-orange-50'
+                    className='mt-1 block w-full rounded-md border border-gray-300 py-3 px-3 shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary bg-gray-100'
                   >
                     <option value=''>{field.placeholder}</option>
                     {field.options.map((option) => (
@@ -160,9 +160,11 @@ const Questions_Form = () => {
                     <input
                       type='text'
                       id={field.name}
-                      placeholder='' // Empty placeholder to trigger floating label behavior
+                      placeholder=' ' 
                       {...register(field.name, field.validation)}
-                      className='peer w-full rounded-lg border border-gray-200 px-4 pb-2 pt-6 text-base outline-none transition-all focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary bg-orange-50'
+                      className={`peer w-full rounded-lg border border-gray-200 px-4 pb-2 pt-6 text-base outline-none transition-all focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary bg-gray-100 `}
+                      // onFocus={() => (field.placeholder = field.name)}
+                      // onBlur={() => (field.placeholder = '')}
                     />
                     <label
                       htmlFor={field.name}
@@ -184,17 +186,18 @@ const Questions_Form = () => {
         </div>
 
         {/* Message textarea - full width */}
-        <div class='relative'>
+        <div className='relative'>
           <textarea
             id='message'
             placeholder=''
             rows={4}
-            className='peer w-full rounded-lg border border-gray-200 px-4 pb-2 pt-6 text-base outline-none transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 bg-orange-50 mt-5'
-            onfocus="this.placeholder='Message'"
-            onblur="this.placeholder=''"
+            {...register('message')}
+            className='peer w-full rounded-lg border border-gray-200 px-4 pb-2 pt-6 text-base outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20 bg-gray-100 mt-5 '
+            // onFocus={() => (field.placeholder = 'Message')}
+            // onBlur={() => (field.placeholder = '')}
           />
           <label
-            for='message'
+            htmlFor='message'
             className='absolute left-4 top-4 z-10 origin-[0] -translate-y-3 scale-75 transform text-gray-500 duration-200 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-blue-500 py-4'
           >
             {' '}

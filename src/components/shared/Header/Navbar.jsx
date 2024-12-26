@@ -44,7 +44,7 @@ const Navbar = () => {
               <li key={index + 1} className=''>
                 <Link
                   to={item.link}
-                  className='text-primary text-lg py-4 px-3 hover:bg-primary hover:text-white duration-500 font-semibold'
+                  className='text-primary text-lg py-4 px-3 hover:bg-primary hover:text-white duration-500 font-gellix'
                 >
                   {item.name}
                 </Link>
@@ -82,12 +82,12 @@ const Navbar = () => {
             transition={{ type: 'spring', damping: 25, stiffness: 150 }}
             className='bg-white z-50 absolute w-full left-0'
           >
-            <ul className='text-primary text-xl p-0'>
+            <ul className='text-primary text-xl'>
               {menuItems.map((item, index) => {
                 return (
                   <li
                     key={index + 1}
-                    className='py-5 px-3 hover:bg-primary hover:text-white duration-500 font-semibold cursor-pointer'
+                    className='py-3 px-3 hover:bg-primary hover:text-white duration-500 font-semibold cursor-pointer'
                   >
                     <Link to={item.link} onClick={() => setMobileMenuShow(false)}>{item.name}</Link>
                   </li>
@@ -106,19 +106,19 @@ export default Navbar;
 const menuItems = [
   {
     name: 'Industries',
-    link: '/industries',
+    link: '#',
   },
   {
     name: 'Services',
-    link: '/service',
+    link: '#',
   },
   {
     name: 'Products',
-    link: '/products',
+    link: '#',
   },
   {
     name: 'Resources',
-    link: '/resources',
+    link: '#',
   },
   {
     name: 'Contact Us',

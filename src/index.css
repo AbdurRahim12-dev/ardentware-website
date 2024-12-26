@@ -4,76 +4,92 @@
 
 @font-face {
   font-family: 'Gellix';
-  src: url('../assets/fonts/Gellix-Thin.woff2') format('woff2');
+  src: url('/fonts/Gellix-Thin.woff2') format('woff2');
   font-weight: 200; /* Extra Light */
   font-style: normal;
+  font-display: swap; /* Optimized font loading */
 }
 
 @font-face {
   font-family: 'Gellix';
-  src: url('../assets/fonts/Gellix-Light.woff2') format('woff2');
+  src: url('/fonts/Gellix-Light.woff2') format('woff2');
   font-weight: 300; /* Light */
   font-style: normal;
+  font-display: swap; /* Optimized font loading */
 }
 
 @font-face {
   font-family: 'Gellix';
-  src: url('../assets/fonts/Gellix-Regular.woff2') format('woff2');
+  src: url('/fonts/Gellix-Regular.woff2') format('woff2');
   font-weight: 400; /* Regular */
   font-style: normal;
+  font-display: swap; /* Optimized font loading */
 }
 
 @font-face {
   font-family: 'Gellix';
-  src: url('../assets/fonts/Gellix-Medium.woff2') format('woff2');
+  src: url('/fonts/Gellix-Medium.woff2') format('woff2');
   font-weight: 500; /* Medium */
   font-style: normal;
+  font-display: swap; /* Optimized font loading */
 }
 
 @font-face {
   font-family: 'Gellix';
-  src: url('../assets/fonts/Gellix-SemiBold.woff2') format('woff2');
+  src: url('/fonts/Gellix-SemiBold.woff2') format('woff2');
   font-weight: 600; /* Semi Bold */
   font-style: normal;
+  font-display: swap; /* Optimized font loading */
 }
 
 @font-face {
   font-family: 'Gellix';
-  src: url('../assets/fonts/Gellix-Bold.woff2') format('woff2');
+  src: url('/fonts/Gellix-Bold.woff2') format('woff2');
   font-weight: 700; /* Bold */
   font-style: normal;
+  font-display: swap; /* Optimized font loading */
 }
 
 @font-face {
   font-family: 'Gellix';
-  src: url('../assets/fonts/Gellix-ExtraBold.woff2') format('woff2');
+  src: url('/fonts/Gellix-ExtraBold.woff2') format('woff2');
   font-weight: 800; /* Extra Bold */
   font-style: normal;
+  font-display: swap; /* Optimized font loading */
 }
 
 @font-face {
   font-family: 'Gellix';
-  src: url('../assets/fonts/Gellix-Black.woff2') format('woff2');
+  src: url('/fonts/Gellix-Black.woff2') format('woff2');
   font-weight: 900; /* Black */
   font-style: normal;
+  font-display: swap; /* Optimized font loading */
 }
 
 /* font goldplay */
 @font-face {
   font-family: 'Goldplay';
-  src: url('../assets/fonts/goldplay-semibold.woff2') format('woff2');
+  src: url('/fonts/goldplay-semibold.woff2') format('woff2');
   font-weight: 600; /* Semibold */
   font-style: normal;
-}
-/* font goldplay alt*/
-@font-face {
-  font-family: 'GoldplayAlt';
-  src: url('../assets/fonts/goldplay-alt-bold.otf') format('otf');
-  font-weight: 700; /* Bold */
-  font-style: normal;
+  font-display: swap; /* Optimized font loading */
 }
 
-body {
-  font-family: 'Gellix', sans-serif;
+/* font goldplay alt */
+@font-face {
+  font-family: 'GoldplayAlt';
+  src: url('/fonts/goldplay-alt-bold.otf') format('otf');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap; /* Optimized font loading */
+}
+
+
+body{
+  /* font-family: 'Gellix', sans-serif; */
   /* font-family: 'GoldplayAlt', sans-serif; */
+}
+
+ h4 {
+ font-weight: 100 !important;
 }

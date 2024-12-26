@@ -45,7 +45,7 @@ export default function Technology() {
         <div className='grid gap-12 md:grid-cols-2 '>
           {/* Left Column - Hero Text */}
           <div className='w-full md:border-r-2'>
-            <h1 className='text-3xl font-semibold font-gellix leading-tight text-gray-900 sm:text-4xl md:text-5xl md:leading-tight md:mt-60 '>
+            <h1 className='text-3xl font-semibold font-gellix leading-tight text-gray-900 sm:text-4xl md:text-5xl md:leading-tight md:mt-60  '>
               We empower companies to stay ahead by acting with clarity and agility.
             </h1>
           </div>
@@ -58,7 +58,7 @@ export default function Technology() {
                 <div key={service.title} className='border-b border-gray-200'>
                   <button
                     onClick={() => toggleItem(service.title)}
-                    className='flex w-full items-center justify-between align-middle py-4 text-left text-gray-900 space-x-8'
+                    className='flex w-full items-center justify-between align-middle py-4 text-left text-gray-900 space-x-8 font-gellix'
                   >
                     <a href=''>
                       <span className='font-medium transition-all duration-300 ease-in-out text-xl sm:text-xl md:text-2xl hover:text-[#45C4B0] '>
@@ -90,7 +90,7 @@ export default function Technology() {
                 <div key={service.title} className='border-b border-gray-200'>
                   <button
                     onClick={() => toggleItem(service.title)}
-                    className='flex w-full items-center justify-between py-4 text-left text-gray-900'
+                    className='flex w-full items-center justify-between py-4 text-left text-gray-900 font-gellix'
                   >
                     <a href=''>
                       <span className='font-medium text-xl transition-all duration-300 ease-in-out sm:text-xl md:text-2xl hover:text-[#45C4B0]'>

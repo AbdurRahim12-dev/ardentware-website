@@ -5,7 +5,7 @@ const Press_Release = () => {
     <>
       <div className='bg-accent text-white'>
         <div className='container py-10'>
-          <h2 className='text-2xl'>
+          <h2 className='text-2xl font-medium'>
             Modernizing Technology, Transforming Experiences
             {/* <button className='text-sm font-semibold text-secondary inline-flex items-center'>
               Read More <BiRightArrow />
@@ -14,7 +14,8 @@ const Press_Release = () => {
         </div>
       </div>
       <div className='container py-16 '>
-        <h4 className='text-2xl md:text-3xl lg:text-4xl !font-extralight text-primary/90 !leading-snug text-justify text-wrap '>
+        {/* text-2xl md:text-3xl lg:text-4xl !font-thin text-primary/90 !leading-snug text-justify text-wrap */}
+        <h4 className='text-2xl md:text-3xl lg:text-4xl !font-thin text-primary/90 !leading-snug text-justify text-wrap'>
           At <span className='font-bold text-accent'>Ardentware</span>, we empower businesses to
           stay ahead in a rapidly evolving world. By modernizing technology,{' '}
           <span className='font-bold text-accent'>reimagining</span> processes, and transforming

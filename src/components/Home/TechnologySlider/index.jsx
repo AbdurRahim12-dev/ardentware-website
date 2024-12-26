@@ -47,7 +47,7 @@ export default function TechnologySlider() {
    <div className="bg-gray-100">
      <div className='container w-full mx-auto py-8 md:py-16 px-2 md:px-4 '>
       {/* Title Section */}
-      <h2 className='text-2xl md:text-4xl font-bold text-center text-gray-800'>Technology Partners</h2>
+      <h2 className='text-3xl md:text-4xl font-bold text-center text-gray-800 font-gellix'>Technology Partners</h2>
 
       {/* Swiper Component */}
       <Swiper
@@ -78,7 +78,7 @@ export default function TechnologySlider() {
           '--swiper-pagination-progressbar-width': '60%',
           '--swiper-pagination-progressbar-bottom': '20px',
           '--swiper-pagination-progressbar-left': '20%',
-          padding: '60px',
+          padding: '30px',
         }}
         loop={true}
         autoplay={{
@@ -89,7 +89,7 @@ export default function TechnologySlider() {
           clickable: true,
         }}
         modules={[Pagination, Autoplay]}
-        className='mySwiper py-8 md:py-16'
+        className='mySwiper  md:py-14'
       >
         {logos.map((logo, index) => (
           <SwiperSlide key={index}>
