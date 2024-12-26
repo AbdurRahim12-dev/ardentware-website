@@ -9,7 +9,7 @@ import logo from '../../../assets/logo.png';
 const Navbar = () => {
   const [mobileMenuShow, setMobileMenuShow] = useState(false);
   return (
-    <section className=' sticky top-0 z-50 bg-white w-full'>
+    <section className=' sticky top-0 z-50 bg-white w-full shadow-md'>
       <nav className='container flex items-center justify-between align-middle py-3 lg:py-0 lg:pb-1'>
         {/* <h2 className='text-2xl'>ARDENTWARE</h2> */}
         {/* Logo */}
