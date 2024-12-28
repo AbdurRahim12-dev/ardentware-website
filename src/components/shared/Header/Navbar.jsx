@@ -3,13 +3,15 @@ import { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoCloseSharp } from 'react-icons/io5';
 import { RiSearchLine } from 'react-icons/ri';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../../../assets/logo.png';
+
 
 const Navbar = () => {
   const [mobileMenuShow, setMobileMenuShow] = useState(false);
+  const location = useLocation()
   return (
-    <section className=' sticky top-0 z-50 bg-white w-full shadow-md'>
+    <section className={`${location.pathname === '/service' ? '' : 'sticky top-0'} z-50 bg-white w-full shadow`}>
       <nav className='container flex items-center justify-between align-middle py-3 lg:py-0 lg:pb-1'>
         {/* <h2 className='text-2xl'>ARDENTWARE</h2> */}
         {/* Logo */}
@@ -44,7 +46,7 @@ const Navbar = () => {
               <li key={index + 1} className=''>
                 <Link
                   to={item.link}
-                  className='text-primary text-lg py-4 px-3 hover:bg-primary hover:text-white duration-500 font-gellix'
+                  className='text-primary font-normal text-lg py-4 px-3 hover:bg-primary hover:text-white duration-500 font-gellix'
                 >
                   {item.name}
                 </Link>

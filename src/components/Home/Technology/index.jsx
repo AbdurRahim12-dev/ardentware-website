@@ -45,7 +45,7 @@ export default function Technology() {
         <div className='grid gap-12 md:grid-cols-2 '>
           {/* Left Column - Hero Text */}
           <div className='w-full md:border-r-2'>
-            <h1 className='text-3xl font-semibold font-gellix leading-tight text-gray-900 sm:text-4xl md:text-5xl md:leading-tight md:mt-60  '>
+            <h1 className='text-3xl font-medium font-gellix leading-tight text-gray-900 sm:text-4xl md:text-5xl md:leading-tight md:mt-60  '>
               We empower companies to stay ahead by acting with clarity and agility.
             </h1>
           </div>

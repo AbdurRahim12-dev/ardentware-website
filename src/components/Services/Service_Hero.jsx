@@ -4,10 +4,10 @@ const Service_Hero = () => {
   return (
     <section className='bg-[url("https://www.cognizant.com/content/dam/connectedassets/cognizant-global-marketing/marketing-channels/cognizant-dotcom/en_us/services/images/artificial-intelligence-services-hero-image.jpg")] bg-cover bg-center bg-no-repeat relative'>
       <div className='container text-white'>
-        <h1 className='text-[5rem] font-semibold w-full md:w-[58%] leading-normal py-[5.5rem]'>
+        <h1 className='text-[4rem] md:text-[5rem] font-semibold w-full md:w-[58%] leading-tight font-gellix py-[5.5rem]'>
           Empowering better, faster decision-making with data and AI
         </h1>
-        <div className='bg-white/85 flex items-center gap-4 p-4'>
+        <div className='bg-white/85 flex flex-col md:flex-row items-center gap-4 p-4'>
           <div>
             <img
               src='https://cognizant.scene7.com/is/image/cognizant/amf1-a-winning-strategy-thumbnail-042023'
@@ -15,7 +15,7 @@ const Service_Hero = () => {
               className='w-[400px] h-[225px] object-cover rounded-lg'
             />
           </div>
-          <div className='relative z-10 space-y-4'>
+          <div className='relative z-10 space-y-4 '>
             <h2 className='text-2xl text-primary font-semibold'>
               AMF1: A winning strategy fueled with insight and speed
             </h2>

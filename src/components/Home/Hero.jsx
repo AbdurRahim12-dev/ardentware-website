@@ -87,7 +87,7 @@ const Hero = () => {
           >
             <motion.h1
               variants={itemVariants}
-              className='text-3xl md:text-6xl font-semibold !leading-tight font-gellix'
+              className='text-3xl md:text-[4rem] font-semibold !leading-snug font-gellix'
             >
               {activeContent.title}
             </motion.h1>

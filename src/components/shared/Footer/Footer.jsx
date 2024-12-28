@@ -19,7 +19,7 @@ const Footer = () => {
     { id: `©${new Date().getFullYear()} Ardentware, all rights reserved.`,  },
   ];
   return (
-    <section className='bg-[#E8E8E6] py-6 mt-10 '>
+    <section className='bg-[#E8E8E6] py-6 mt-8 md:mt-0 '>
       {/* Social Media Link */}
       <div className='container grid grid-cols-1 md:grid-cols-2 '>
         <div className='text-accent text-3xl flex items-center gap-4'>
