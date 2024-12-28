@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-export default function SoftwareDrivenCard({ title, description, video }) {
-  const [isHovered, setIsHovered] = useState(false);
+export default function SoftwareDrivenCard({ title, description, imageUrl, video }) {
+  const [isHovered, setIsHovered] = useState(true);
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -20,12 +20,12 @@ export default function SoftwareDrivenCard({ title, description, video }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* <img
+      <img
         src={imageUrl}
         alt={title}
-        className='absolute inset-0 w-full h-full object-cover transition-opacity duration-500'
+        className='absolute inset-0 w-full h-full object-cover transition-opacity duration-500 md:hidden'
         // style={{ opacity: isHovered ? 0 : 1 }}
-      /> */}
+      />
 
       {/* <video
         ref={videoRef}
@@ -45,7 +45,7 @@ export default function SoftwareDrivenCard({ title, description, video }) {
         preload='metadata'
         playsInline
         loading='lazy'
-        className='absolute inset-0 w-full h-full object-cover duration-500'
+        className='absolute inset-0 w-full h-full object-cover duration-500 hidden md:block'
       >
         <source src={video} type='video/mp4' srcSet={video} />
         <img src={video} alt={title} className='w-full h-full object-cover' />

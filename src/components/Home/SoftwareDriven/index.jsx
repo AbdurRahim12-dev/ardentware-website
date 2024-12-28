@@ -11,14 +11,14 @@ export default function SoftwareDriven() {
         description:
           'Unlock new possibilities with innovative software solutions designed to fuel your business growth in the digital age.',
         video: '/videos/web-car.mp4',
-        // imageUrl: '/images/videoframe_6013.png',
+        imageUrl: '/images/videoframe_6013.png',
       },
       {
         title: 'AI-Driven Cloud Transformation for Every Industry',
         description:
           'Revolutionize your business operations with tailored cloud solutions powered by industry expertise and artificial intelligence.',
         video: '/videos/marelli-tile.mp4',
-        // imageUrl: '/images/videoframe_2623.png',
+        imageUrl: '/images/videoframe_2623.png',
       },
       // {
       //   title: 'Master Cloud Economics & Harness the Power of AI',
