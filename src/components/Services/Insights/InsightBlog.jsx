@@ -12,9 +12,10 @@ export default function Insights() {
             className='space-y-9'
           >
             <motion.h2
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.8, once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
              className='text-sm font-semibold tracking-wide uppercase relative inline-block '>
               BUSINESS INTELLIGENCE
               <div className='absolute -bottom-5 left-0 w-full h-0.5 bg-gradient-to-r from-[#006fba] to-[#21fceb]' />
@@ -22,9 +23,10 @@ export default function Insights() {
           </div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.8, once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             className='text-3xl md:text-[2.8rem] font-semibold font-gellix text-navy-900'
           >
             Recently published insights
@@ -48,16 +50,18 @@ export default function Insights() {
                 </div>
                 <div className='p-6 space-y-4'>
                   <motion.h3
-                    initial={{ opacity: 0, x: -100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ amount: 0.8, once: true }}
-                    className='text-[20px] md:text-[25.632px] font-semibold  text-accent group-hover:text-accent/80 transition-colors duration-200'>
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                    className='text-[20px] md:text-[25.632px] font-semibold  text-accent group-hover:text-accent/80 transition-colors duration-200 cursor-pointer'>
                     {insight.title}
                   </motion.h3>
                   <motion.p
-                    initial={{ opacity: 0, x: -100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ amount: 0.8, once: true }}
+                    transition={{ duration: 0.8, delay: 0.8 }}
                     className='text-primary text-md font-medium '
                   >
                     {insight.description}
@@ -67,11 +71,12 @@ export default function Insights() {
                     <BiRightArrow className='size-5 mt-[3px]' />
                   </div> */}
                   <motion.a
-                    initial={{ opacity: 0, x: -100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ amount: 0.5, once: true }}
+                    transition={{ duration: 0.8, delay: 1 }}
                     href='#'
-                    className=' text-accent hover:text-accent flex items-center gap-1 text-[19px] font-semibold'
+                    className=' text-accent hover:text-accent flex items-center gap-1 text-[16px] font-semibold'
                   >
                     Know more         
                     <BiRightArrow className='mt-[5px] size-6' />

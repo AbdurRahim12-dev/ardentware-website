@@ -9,18 +9,19 @@ export default function Offerings() {
         <div className='flex flex-col md:flex-row gap-12'>
           <motion.h3
             animate={{ rotate: 360 }}
-            transition={{ duration: 1 }}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.8, once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className=' text-3xl md:text-4xl font-light'
           >
             Data and AI solutions for the <br className='hidden md:block' /> modern enterprise
           </motion.h3>
           <motion.p
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.8, once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             className='flex-1 text-[20px] font-medium text-primary'
           >
             Wherever you are on your journey, in whatever industry you are in—from aggregating vast

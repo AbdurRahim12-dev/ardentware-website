@@ -13,7 +13,7 @@ export default function Business() {
           className='text-primary text-3xl md:text-5xl font-semibold !leading-tight'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
         >
           {words.map((word, index) => (
             <motion.span
@@ -23,7 +23,7 @@ export default function Business() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ amount: 0.8 }}
               transition={{
-                delay: index * 0.1, // Add delay for each word
+                delay: index * 0.2, // Add delay for each word
                 type: 'spring',
                 stiffness: 100,
                 damping: 20,

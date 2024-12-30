@@ -21,6 +21,7 @@ export default function Future() {
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.8, once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
             className=' text-5xl font-semibold tracking-tight text-[#26efe9] sm:text-4xl lg:text-5xl '
           >
             Future-ready means AI-ready
@@ -29,6 +30,7 @@ export default function Future() {
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.8, once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className='!mb-6 text-lg text-gray-200 sm:text-xl font-normal'
           >
             Explore the five essential areas to achieve AI mastery in this new report based on data
@@ -38,6 +40,7 @@ export default function Future() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.8, once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
             className=' bg-secondary text-primary hover:bg-secondary/90 px-4 md:px-6 py-3 rounded-full text-xl font-semibold flex items-center gap-2'
           >
             Read the interactive report

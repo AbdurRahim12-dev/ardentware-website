@@ -7,17 +7,19 @@ export default function Services() {
     <section className='container px-4 py-16 sm:px-6 lg:px-8'>
       <div className='space-y-4 mb-12'>
         <motion.h2
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ amount: 0.8, once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className='text-[31.952px] md:text-5xl font-semibold text-[#0A0F2C] leading-tight'
         >
           Explore more services
         </motion.h2>
         <motion.p
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ amount: 0.6, once: true  }}
+          transition={{ duration: 0.5, delay: 0.4 }}
           className='text-lg md:text-xl text-primary font-medium  leading-tight'
         >
           Learn more about other services that can enhance data and AI in your business:
@@ -29,9 +31,10 @@ export default function Services() {
           return (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, x: -80 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ amount: 0.8, once: true }}
+              transition={{ duration: 0.5, delay: 0.6 }}
               className='grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 '
             >
               <div className='relative bg-black overflow-hidden h-[200px] md:h-[250px]'>

@@ -43,40 +43,50 @@ const Navbar = () => {
           )}
         </div>
         <ul className='hidden lg:flex items-center  mt-2'>
-          {menuItems.map((item, idx) => (
-            <li key={item.href}>
-              <Link
-                to={item.link}
-                className='relative px-5 py-1 text-[19px] font-medium text-primary transition-all duration-300 group flex items-center gap-2'
-                style={{
-                  backgroundColor: location.pathname === item.link ? '#2f78c4' : '',
-                  color: location.pathname === item.link ? '#fff' : '',
-                  borderRadius: location.pathname === item.link ? '9999px' : '',
-                  fontWeight: location.pathname === item.link ? '500' : ''
-                }}
-                onMouseEnter={() => setHoveredIndex(idx)}
-                onMouseLeave={() => setHoveredIndex(null)}
-              >
-                <span className='relative z-10 group-hover:text-white transition-colors duration-300'>
-                  {item.name}
-                </span>
-                {hoveredIndex === idx && (
-                  <motion.div
-                    layoutId='navbar-hover'
-                    className='absolute inset-0 bg-accent rounded-full'
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.8 }}
-                    transition={{
-                      type: 'spring',
-                      bounce: 0.4,
-                      duration: 0.4,
-                    }}
-                  />
-                )}
-              </Link>
-            </li>
-          ))}
+          {menuItems.map((item, idx) => {
+            const isActive = location.pathname === item.link;
+            return (
+              <li key={item.href} className='relative'>
+                <Link
+                  to={item.link}
+                  className='relative px-5 py-1 text-[19px] font-medium text-primary transition-all duration-300 group flex items-center gap-2'
+                  // style={{
+                  //   backgroundColor: location.pathname === item.link ? '#2f78c4' : '',
+                  //   color: location.pathname === item.link ? '#fff' : '',
+                  //   borderRadius: location.pathname === item.link ? '9999px' : '',
+                  //   fontWeight: location.pathname === item.link ? '500' : '',
+                  // }}
+                  onMouseEnter={() => setHoveredIndex(idx)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <span className='relative z-10 group-hover:text-primary transition-colors duration-300'>
+                    {item.name}
+                  </span>
+                  {hoveredIndex === idx && (
+                    <motion.div
+                      layoutId='navbar-hover'
+                      className={`absolute inset-0 border-b-2 border-primary max-w-[6rem] mx-auto group-hover:left-0 ${
+                        hoveredIndex === idx ? 'left-0 w-full' : 'left-1/2 w-0'
+                      }`}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.8 }}
+                      transition={{
+                        type: 'spring',
+                        bounce: 0.4,
+                        duration: 0.4,
+                      }}
+                    />
+                  )}
+                </Link>
+                <span
+                  className={`absolute -bottom-2 h-[3px] bg-white opacity-50 transition-all duration-500 ease-in-out group-hover:w-full group-hover:left-0 ${
+                    isActive ? 'left-0 w-full' : 'left-1/2 w-0'
+                  }`}
+                />
+              </li>
+            );
+          })}
         </ul>
 
         {/* <div>
@@ -110,20 +120,26 @@ const Navbar = () => {
           >
             <ul className='text-primary text-xl'>
               {menuItems.map((item) => {
+                const isActive = location.pathname === item.link;
                 return (
                   <li
                     key={item.name}
-                    className='py-3 px-3 hover:bg-primary hover:text-white duration-500 font-semibold cursor-pointer'
-                    style={{
-                      backgroundColor: location.pathname === item.link ? '#2f78c4' : '',
-                      color: location.pathname === item.link ? '#fff' : '',
-                      // borderRadius: location.pathname === item.link ? '9999px' : '',
-                      fontWeight: location.pathname === item.link ? '500' : ''
-                    }}
+                    className='relative py-3 px-3 hover:bg-primary hover:text-white duration-500 font-semibold cursor-pointer'
+                    // style={{
+                    //   backgroundColor: location.pathname === item.link ? '#2f78c4' : '',
+                    //   color: location.pathname === item.link ? '#fff' : '',
+                    //   // borderRadius: location.pathname === item.link ? '9999px' : '',
+                    //   fontWeight: location.pathname === item.link ? '500' : ''
+                    // }}
                   >
                     <Link to={item.link} onClick={() => setMobileMenuShow(false)}>
                       {item.name}
                     </Link>
+                    <span
+                      className={`absolute -bottom-2 h-[3px] bg-white opacity-50 transition-all duration-500 ease-in-out group-hover:w-full group-hover:left-0 ${
+                        isActive ? 'left-0 w-full' : 'left-1/2 w-0'
+                      }`}
+                    />
                   </li>
                 );
               })}

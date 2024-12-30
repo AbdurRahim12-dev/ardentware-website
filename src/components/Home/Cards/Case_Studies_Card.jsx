@@ -10,9 +10,10 @@ const Case_Studies_Card = ({ data }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: 80 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ amount: 0.8, once: true  }}
+      transition={{ duration: 0.5, delay: 0.2 }}
       className='bg-cover bg-center min-h-[325px] rounded-xl overflow-hidden relative'
       style={{ backgroundImage: `url(${image})` }}
       onMouseEnter={() => setIsHovered(true)}
@@ -26,7 +27,7 @@ const Case_Studies_Card = ({ data }) => {
               initial={{ y: 160 }}
               animate={{ y: 160 }}
               exit={{ y: 400, opacity: 0 }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className='absolute inset-0 bg-primary/60 p-5'
             >
               <span className='uppercase text-lg underline underline-offset-[15px]'>
@@ -40,7 +41,7 @@ const Case_Studies_Card = ({ data }) => {
               initial={{ y: 400 }}
               animate={{ y: 0 }}
               exit={{ y: 400, opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className='absolute inset-0 bg-primary/60 p-5 py-16'
             >
               <span className='uppercase text-lg underline underline-offset-[15px]'>

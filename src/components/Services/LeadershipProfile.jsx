@@ -6,9 +6,10 @@ export default function LeadershipProfile() {
     <div className=' bg-[#000033] text-white py-12 px-4'>
       <div className='container'>
         <motion.h1
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ amount: 0.8, once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className=' text-[31.952px] md:text-5xl font-medium mb-12'
         >
           Leadership
@@ -19,16 +20,18 @@ export default function LeadershipProfile() {
             return (
               <motion.div
                 key={profile.id}
-                initial={{ opacity: 0, x: -80 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ amount: 0.8, once: true }}
+                transition={{ duration: 0.5, delay: 0.4 }}
                 className='max-w-sm '
               >
                 <div className='mb-6'>
                   <motion.img
-                    initial={{ opacity: 0, x: -80 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ amount: 0.8, once: true }}
+                    transition={{ duration: 0.5, delay: 0.6 }}
                     src='https://cognizant.scene7.com/is/image/cognizant/naveen-sharma-profile?fmt=png-alpha'
                     alt='Leadership profile photo'
                     width={400}

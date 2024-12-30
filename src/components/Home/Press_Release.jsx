@@ -7,8 +7,9 @@ const Press_Release = () => {
       <div className='bg-accent text-white'>
         <div className='container py-10'>
           <motion.h2
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.8 }}
             className='text-2xl font-medium'
           >
@@ -26,10 +27,10 @@ const Press_Release = () => {
           color: 'rgba(0, 0, 72, 1)',
         }}
         className="text-2xl md:text-[1.8rem] lg:text-[36px] text-left text-wrap leading-tight"
-        initial={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        animate={{ opacity: 1, y: 0 }}
-        viewport={{ amount: 0.8 }}
+        viewport={{ amount: 0.8, once: true }}
+        transition={{ duration: 0.8, delay: 0.4 }}
       >
         At <span className="font-bold text-accent">Ardentware</span>, we empower businesses to
         stay ahead in a rapidly evolving world. By modernizing technology,{' '}

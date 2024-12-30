@@ -7,9 +7,10 @@ export default function FooterBottom() {
         <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4'>
           {/* Quick Link Column 1 */}
           <motion.div
-            initial={{ opacity: 0, y: -100 }}
+            initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.8, once: true }}
+            transition={{ duration: 0.9, delay: 0.3 }}
             className='space-y-4 '
           >
             <h2 className='text-lg font-semibold text-primary'>Quick Link</h2>
@@ -39,9 +40,10 @@ export default function FooterBottom() {
 
           {/* Services Column 2 */}
           <motion.div
-            initial={{ opacity: 0, y: -100 }}
+            initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.8, once: true }}
+            viewport={{ amount: 0.9, once: true }}
+            transition={{ duration: 0.9, delay: 0.4 }}
             className='space-y-4 '
           >
             <h2 className='text-lg font-semibold text-primary '>Our Services</h2>
@@ -84,6 +86,7 @@ export default function FooterBottom() {
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.8, once: true }}
+            transition={{ duration: 0.9, delay: 0.5 }}
             className='space-y-4 '
           >
             <h2 className='text-lg font-semibold text-primary '>Industries</h2>
@@ -123,9 +126,10 @@ export default function FooterBottom() {
 
           {/* Find Us Ardentware */}
           <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.8, once: true }}
+            transition={{ duration: 0.9, delay: 0.6 }}
             className='space-y-2 '
           >
             <h2 className='text-lg font-semibold text-primary'>Find Us</h2>

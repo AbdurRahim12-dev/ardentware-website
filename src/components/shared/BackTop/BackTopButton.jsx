@@ -1,4 +1,5 @@
 import { BiRightArrow } from 'react-icons/bi';
+import { motion } from 'motion/react';
 
 const BackTopButton = ({ showButtons }) => {
   const scrollToTop = () => {
@@ -9,10 +10,11 @@ const BackTopButton = ({ showButtons }) => {
   };
   return (
     <>
-      <div
-        className={`fixed bottom-5 right-5 transition-opacity duration-300 ${
-          showButtons ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={showButtons ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+        transition={{ duration: 0.5 }}
+        className="fixed bottom-5 right-5"
       >
         <button
           onClick={scrollToTop}
@@ -21,7 +23,7 @@ const BackTopButton = ({ showButtons }) => {
           <span>Back to top</span>
           <BiRightArrow className='-rotate-90' />
         </button>
-      </div>
+      </motion.div>
     </>
   );
 };

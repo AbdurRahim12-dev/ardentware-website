@@ -1,5 +1,7 @@
 import { useMemo } from 'react';
 import SoftwareDrivenCard from './SoftwareDrivenCard';
+import { AnimatePresence } from 'motion/react';
+
 
 
 export default function SoftwareDriven() {
@@ -40,7 +42,9 @@ export default function SoftwareDriven() {
     >
       {data.map((item) => (
         <div key={item.title} className=''>
-          <SoftwareDrivenCard {...item} />
+          <AnimatePresence mode='wait'>
+            <SoftwareDrivenCard {...item} />
+          </AnimatePresence>
         </div>
       ))}
     </div>

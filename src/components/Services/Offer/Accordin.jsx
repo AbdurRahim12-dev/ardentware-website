@@ -16,6 +16,7 @@ export default function Accordion() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ amount: 0.8, once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           key={item.id}
           // className={`mb-[2px] ${
           //   index === accordionData.length - 1 ? 'rounded-b-lg overflow-hidden' : 'rounded-t-lg'

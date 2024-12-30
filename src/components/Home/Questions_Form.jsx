@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form';
 import Header_Text from '../ui/Header_Text/Header_Text';
 import { BiRightArrow } from 'react-icons/bi';
 import { ContactFormFields } from '../../libs/contactFormFields';
-import { motion } from 'motion/react';
+// import { motion } from 'motion/react';
 
 const Questions_Form = () => {
   const {
@@ -95,15 +95,16 @@ const Questions_Form = () => {
         </div>
 
         <div className='mt-8'>
-          <motion.button
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ amount: 0.8, once: true }}
+          <button
+            // initial={{ opacity: 0, y: 100 }}
+            // whileInView={{ opacity: 1, y: 0 }}
+            // viewport={{ amount: 0.8, once: true }}
+            // transition={{ duration: 0.8, delay: 0.2 }}
             type='submit'
             className='rounded-full bg-secondary px-6 py-3 text-primary text-xl font-bold hover:bg-secondary/60 focus:outline-none focus:ring-2 focus:ring-secobg-secondary focus:ring-offset-2 inline-flex items-center gap-2 duration-300'
           >
             Submit <BiRightArrow className='text-xl mt-[5px]' />
-          </motion.button>
+          </button>
         </div>
       </form>
       {/* <p className='mt-5 text-primary text-xl'>

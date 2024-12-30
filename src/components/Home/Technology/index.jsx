@@ -46,9 +46,10 @@ export default function Technology() {
           {/* Left Column - Hero Text */}
           <div className='w-full md:border-r-2'>
             <motion.h1
-              initial={{ opacity: 0, y: -100 }}
+              initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ amount: 0.8, once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className='text-3xl font-medium font-gellix leading-tight text-gray-900 sm:text-4xl md:text-5xl md:leading-tight md:mt-60  '
             >
               We empower companies to stay ahead by acting with clarity and agility.
@@ -63,9 +64,10 @@ export default function Technology() {
                 <motion.div
                   key={service.title}
                   className='border-b border-gray-200'
-                  initial={{ opacity: 0, y: 50 }}
+                  initial={{ opacity: 0, y: 100 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.8 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
                 >
                   <button
                     // onClick={() => toggleItem(service.title)}
@@ -95,7 +97,7 @@ export default function Technology() {
                       height: expandedItem === service.title ? 'auto' : 0,
                     }}
                     transition={{
-                      duration: 0.3,
+                      duration: 0.8,
                       ease: 'easeInOut',
                     }}
                   >
@@ -113,9 +115,10 @@ export default function Technology() {
                 <motion.div
                   key={service.title}
                   className='border-b border-gray-200'
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 100 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ amount: 0.8, once: true }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
                 >
                   <button
                     // onClick={() => toggleItem(service.title)}

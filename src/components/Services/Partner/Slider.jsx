@@ -15,18 +15,19 @@ export default function Slider() {
   return (
     <div className=' mt-10 px-4 py-16 bg-[#f5f5f2]'>
       <motion.div
-        initial={{ opacity: 0, x: 80 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ amount: 0.8, once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
         className='relative container h-[600px] md:h-[400px]  rounded-lg  overflow-hidden'
       >
         <AnimatePresence mode='wait'>
           <motion.div
             key={currentSlide}
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ amount: 0.8, once: true }}
             className='absolute inset-0 flex items-center'
           >

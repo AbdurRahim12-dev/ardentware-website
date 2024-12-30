@@ -28,9 +28,10 @@ const ServiceContactUs = () => {
       />
 
       <motion.p
-        initial={{ opacity: 0, x: 100 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ amount: 0.6, once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
         className='mt-5 text-xl font-medium text-primary leading-tight'
       >
         Let’s talk about how data and AI can work for your business.

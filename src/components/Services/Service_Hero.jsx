@@ -8,6 +8,7 @@ const Service_Hero = () => {
           initial={{ y: 100 }} // Start off-screen at the bottom
           animate={{ y: 0 }} // Slide up to its original position
           transition={{
+            duration: 0.8,
             type: 'spring',
             damping: 20,
             stiffness: 100,
@@ -18,10 +19,10 @@ const Service_Hero = () => {
         </motion.h1>
         <div className='bg-white/85 flex flex-col md:flex-row items-center gap-4 p-4 w-full '>
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{
-              duration: 0.5,
+              duration: 0.8,
               ease: 'easeOut',
             }}
           >
@@ -36,7 +37,7 @@ const Service_Hero = () => {
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.5,
+                duration: 0.8,
                 ease: 'easeOut',
               }}
               className='md:text-2xl text-xl text-primary font-semibold'
@@ -47,7 +48,7 @@ const Service_Hero = () => {
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.5,
+                duration: 0.8,
                 ease: 'easeOut',
               }}
               className='text-[20px] text-primary pr-10 font-medium'
@@ -60,7 +61,7 @@ const Service_Hero = () => {
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.5,
+                duration: 0.8,
                 ease: 'easeOut',
               }}
               href='#'

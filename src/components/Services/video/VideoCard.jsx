@@ -15,6 +15,7 @@ export default function VideoCard({ image, title, buttonText }) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.8, once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className='text-3xl sm:text-3xl lg:text-5xl text-secondary font-semibold !leading-tight'
           >
             {title}
@@ -23,11 +24,12 @@ export default function VideoCard({ image, title, buttonText }) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.8, once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             href='#'
             className='flex items-center gap-2 text-lg md:text-xl text-secondary font-semibold w-max text-center'
           >
             {buttonText}{' '}
-            <BiRightArrow className='text-2xl border-2 border-secondary rounded-full md:size-12 size-8 p-[6px] md:p-2' />
+            <BiRightArrow className='text-2xl border-2 border-secondary rounded-full md:size-11 size-8 p-[6px] md:p-2' />
           </motion.a>
         </div>
       </div>
