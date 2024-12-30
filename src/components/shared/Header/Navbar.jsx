@@ -2,22 +2,24 @@ import { AnimatePresence, motion } from 'motion/react';
 import { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoCloseSharp } from 'react-icons/io5';
-import { RiSearchLine } from 'react-icons/ri';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../../assets/logo.png';
 
-
 const Navbar = () => {
   const [mobileMenuShow, setMobileMenuShow] = useState(false);
-  const location = useLocation()
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const location = useLocation();
+
   return (
-    <section className={`${location.pathname === '/service' ? '' : 'sticky top-0'} z-50 bg-white w-full shadow`}>
+    <section
+      id='navbar'
+      className={`${location.pathname === '/service' ? '' : 'sticky top-0'} z-50 bg-white w-full shadow`}
+    >
       <nav className='container flex items-center justify-between align-middle py-3 lg:py-0 lg:pb-1'>
         {/* <h2 className='text-2xl'>ARDENTWARE</h2> */}
         {/* Logo */}
         <Link to='/'>
           <img
-           priority="true"
             src={logo}
             srcSet={`${logo} 300w, ${logo} 600w, ${logo} 900w`}
             alt='logo'
@@ -41,18 +43,46 @@ const Navbar = () => {
           )}
         </div>
         <ul className='hidden lg:flex items-center  mt-2'>
-          {menuItems.map((item, index) => {
+          {/* {menuItems.map((item, index) => {
             return (
               <li key={index + 1} className=''>
                 <Link
                   to={item.link}
-                  className='text-primary font-normal text-lg py-4 px-3 hover:bg-primary hover:text-white duration-500 font-gellix'
+                  className='text-primary font-medium text-[20px] py-4 px-3 hover:bg-primary hover:text-white duration-500 font-gellix'
                 >
                   {item.name}
                 </Link>
               </li>
             );
-          })}
+          })} */}
+          {menuItems.map((item, idx) => (
+            <li key={item.href}>
+              <Link
+                to={item.link}
+                className='relative px-5 py-1 text-[19px] font-medium text-primary transition-all duration-300 group flex items-center gap-2'
+                onMouseEnter={() => setHoveredIndex(idx)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                <span className='relative z-10 group-hover:text-white transition-colors duration-300'>
+                  {item.name}
+                </span>
+                {hoveredIndex === idx && (
+                  <motion.div
+                    layoutId='navbar-hover'
+                    className='absolute inset-0 bg-accent rounded-full'
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                    transition={{
+                      type: 'spring',
+                      bounce: 0.4,
+                      duration: 0.4,
+                    }}
+                  />
+                )}
+              </Link>
+            </li>
+          ))}
         </ul>
 
         {/* <div>
@@ -85,13 +115,15 @@ const Navbar = () => {
             className='bg-white z-50 absolute w-full left-0'
           >
             <ul className='text-primary text-xl'>
-              {menuItems.map((item, index) => {
+              {menuItems.map((item) => {
                 return (
                   <li
-                    key={index + 1}
+                    key={item.link}
                     className='py-3 px-3 hover:bg-primary hover:text-white duration-500 font-semibold cursor-pointer'
                   >
-                    <Link to={item.link} onClick={() => setMobileMenuShow(false)}>{item.name}</Link>
+                    <Link to={item.link} onClick={() => setMobileMenuShow(false)}>
+                      {item.name}
+                    </Link>
                   </li>
                 );
               })}
@@ -112,7 +144,7 @@ const menuItems = [
   },
   {
     name: 'Services',
-    link: '#',
+    link: '/service',
   },
   {
     name: 'Products',
@@ -125,5 +157,5 @@ const menuItems = [
   {
     name: 'Contact Us',
     link: '/contact',
-  }
+  },
 ];

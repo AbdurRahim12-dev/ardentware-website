@@ -1,6 +1,7 @@
-import Case_Studies_Card from '../Home/Cards/Case_Studies_Card';
-import Header_Text from '../ui/Header_Text/Header_Text';
-import Slider from './Partner/Slider';
+import { lazy } from 'react';
+const Case_Studies_Card = lazy(() => import('../Home/Cards/Case_Studies_Card'));
+const Header_Text = lazy(() => import('../ui/Header_Text/Header_Text'));
+
 
 const AICaseStudies = () => {
   const data = [
@@ -31,12 +32,14 @@ const AICaseStudies = () => {
   ];
   return (
     <>
-      <section className='container py-16'>
+      <section
+        className='container py-16'
+      >
         <Header_Text
           title='Data and AI case studies'
           description="We partner with our clients to drive solutions for their most pressing problems, no matter where you are on your data and AI journey, we'll meet you there"
         />
-        <div className=' grid grid-cols-1 md:grid-cols-2 gap-8 mt-8'>
+        <div className=' grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-8'>
           {data.map((item) => {
             return <Case_Studies_Card key={item.title} data={item} />;
           })}

@@ -1,6 +1,6 @@
-import React, { useMemo } from 'react';
-// Import Swiper React components
+import { useMemo } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { motion } from 'motion/react';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -45,7 +45,14 @@ export default function TechnologySlider() {
    <div className="bg-gray-100">
      <div className='container w-full mx-auto py-8 md:py-16 px-2 md:px-4 '>
       {/* Title Section */}
-      <h2 className='text-3xl md:text-4xl font-bold text-center text-gray-800 font-gellix'>Technology Partners</h2>
+      <motion.h2
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ amount: 0.8 }}
+        className='text-3xl md:text-4xl font-bold text-center text-gray-800 font-gellix'
+      >
+        Technology Partners
+      </motion.h2>
 
       {/* Swiper Component */}
       <Swiper
@@ -87,7 +94,7 @@ export default function TechnologySlider() {
           clickable: true,
         }}
         modules={[Pagination, Autoplay]}
-        className='mySwiper  md:py-14'
+        className='mySwiper md:py-14'
       >
         {logos.map((logo, index) => (
           <SwiperSlide key={index}>

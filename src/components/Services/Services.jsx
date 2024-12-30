@@ -1,52 +1,64 @@
-import React from 'react';
 import { BiRightArrow } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
+import { motion } from 'motion/react';
 
 export default function Services() {
   return (
-    <section className='max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8'>
+    <section className='container px-4 py-16 sm:px-6 lg:px-8'>
       <div className='space-y-4 mb-12'>
-        <h2 className='text-4xl font-bold text-[#0A0F2C]'>Explore more services</h2>
-        <p className='text-xl text-gray-700'>
+        <motion.h2
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ amount: 0.8 }}
+          className='text-[31.952px] md:text-5xl font-semibold text-[#0A0F2C] leading-tight'
+        >
+          Explore more services
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ amount: 0.6 }}
+          className='text-lg md:text-xl text-primary font-medium  leading-tight'
+        >
           Learn more about other services that can enhance data and AI in your business:
-        </p>
+        </motion.p>
       </div>
 
-      <div className='space-y-12'>
+      <div className='space-y-5'>
         {services.map((service) => {
           return (
-            <div key={service.id} className='grid md:grid-cols-2 gap-8 items-center'>
-              <div className='relative aspect-auto bg-black overflow-hidden'>
-                <img
+            <motion.div
+              key={service.id}
+              initial={{ opacity: 0, x: -80 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ amount: 0.8 }}
+              className='grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 '
+            >
+              <div className='relative bg-black overflow-hidden h-[200px] md:h-[250px]'>
+                <motion.img
                   src={service.img}
                   alt='Quality engineering visualization'
                   width={600}
                   height={200}
-                  className='object-cover'
+                  className='object-cover w-full h-full'
+                  loading='lazy'
+                  whileHover={{ scale: 1.1 }}
                 />
               </div>
-              <div className='space-y-4'>
-                <h3 className='text-3xl font-gellix font-semibold text-[#2B6DF5]'>
-                 {service.title}
-                </h3>
-                <p className='text-primary text-lg leading-relaxed font-gellix'>
-                  {service.desc}
-                </p>
+              <div className='space-y-3 md:space-y-4 col-span-1 md:col-span-2'>
+                <h3 className='text-2xl md:text-[27px] font-semibold text-accent'>{service.title}</h3>
+                <p className='text-primary text-base md:text-lg leading-relaxed'>{service.desc}</p>
                 <Link
                   href='#'
-                  className='inline-flex items-center text-[#2B6DF5] font-semibold hover:text-black text-xl'
+                  className='inline-flex items-center gap-1 text-accent font-semibold hover:text-accent/80 text-lg md:text-xl'
                 >
                   Know more
-                  {/* <ArrowRight className="ml-2 h-5 w-5" /> */}
-                  <BiRightArrow className="ml-2 size-6"/>
+                  <BiRightArrow className='mt-[5px] size-5 md:size-6' />
                 </Link>
               </div>
-            </div>
+            </motion.div>
           );
         })}
-       
-
-      
       </div>
     </section>
   );
@@ -72,7 +84,7 @@ const services = [
     img: 'https://cognizant.scene7.com/is/image/cognizant/security-th?fmt=png-alpha&attribute::MaxSize',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Consulting',
     desc: 'Our consultants elevate insight and experiences to help clients strategize, unify business and technology architectures, generate growth and enable competitive advantage.',
     img: 'https://cognizant.scene7.com/is/image/cognizant/consulting-th?fmt=png-alpha&attribute::MaxSize',

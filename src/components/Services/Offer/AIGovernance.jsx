@@ -1,9 +1,11 @@
-import React from 'react';
 import { BiRightArrow } from 'react-icons/bi';
+import { motion } from 'motion/react';
 
 export default function AIGovernance() {
   return (
-    <div className='relative px-2 md:px-0  overflow-hidden bg-black mt-8'>
+    <div
+      className='relative px-2 md:px-0  overflow-hidden bg-black mt-8'
+    >
       {/* Background image */}
       <div className='absolute inset-0'>
         <img
@@ -17,19 +19,35 @@ export default function AIGovernance() {
       {/* Content */}
       <div className='relative mx-auto max-w-6xl py-16'>
         <div className='max-w-3xl space-y-6'>
-          <h1 className=' text-4xl font-medium tracking- text-white sm:text-4xl lg:text-5xl font-gellix'>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ amount: 0.8 }}
+            className=' text-[31.952px]  text-white lg:text-5xl leading-tight '
+            style={{ fontWeight: '400' }}
+          >
             A more effective approach to <br /> AI governance
-          </h1>
-          <p className='!mb-6 text-lg text-gray-200 sm:text-xl font-semibold'>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ amount: 0.8 }}
+            className='!mb-6 text-lg text-gray-200 sm:text-xl font-medium'
+          >
             Traditional AI governance approaches are outdated and often ineffective. Our modern
             assurance solutions help you build trust in AI systems and free up time you can apply to
             setting thoughtful policy or managing current issues and unknown risks.
-          </p>
-          <button className=' group bg-[#26efe9] text-black hover:bg-[#26efe9]/90 px-8 py-3 rounded-full text-xl font-semibold gap-2 flex items-center'>
-            Explore our solution
+          </motion.p>
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ amount: 0.8 }}
+            className=' bg-secondary text-primary hover:bg-secondary/90 px-8 py-3 rounded-full  font-semibold flex items-center gap-2'
+          >
+            <span style={{ fontSize: '22px' }}>Explore our solution</span>
             {/* <ArrowRight className='ml-2 h-4 w-4 transition-transform group-hover:translate-x-1' /> */}
-            <BiRightArrow className='size-6' />
-          </button>
+            <BiRightArrow className='size-6 text-primary mt-1'  />
+          </motion.button>
         </div>
       </div>
     </div>

@@ -22,6 +22,15 @@ export default {
           xl: '1200px', // Max width of 1200px for extra large screens
         },
       },
+      animation: {
+        shimmer: 'shimmer 2.5s infinite',
+      },
+      keyframes: {
+        shimmer: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+      },
     },
   },
   plugins: [],

@@ -6,12 +6,13 @@ const HomePage = lazy(() => import('../../pages/HomePage'));
 const ServicesPage = lazy(() => import('../../pages/ServicesPage'));
 const ContactPage = lazy(() => import('../../pages/ContactPage'));
 const NotFoundPage = lazy(() => import('../../pages/NotFoundPage'));
-
+const ErrorPage = lazy(() => import('../../pages/ErrorPage'));
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <Main />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',

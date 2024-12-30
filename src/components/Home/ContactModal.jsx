@@ -9,7 +9,7 @@ const ContactModal = ({ showButtons }) => {
   return (
     <>
       <div
-        className={`fixed top-1/2 -right-10 rotate-90 transition-opacity duration-300 overflow-auto ${
+        className={`fixed top-1/2 -right-10 rotate-90 transition-opacity duration-300 overflow-auto  ${
           showButtons ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         style={{
@@ -22,7 +22,7 @@ const ContactModal = ({ showButtons }) => {
       >
         <button
           onClick={() => setIsModalOpen(true)}
-          className="flex items-center gap-2 rounded-md bg-accent px-4 py-2 text-white shadow-md hover:bg-accent/80 focus:outline-none"
+          className="flex items-center gap-2 rounded-md bg-accent px-4 py-2 text-white shadow-md hover:bg-accent/80 focus:outline-none z-50 "
         >
           <span>Contact Us</span>
         </button>
@@ -38,12 +38,12 @@ const ContactModal = ({ showButtons }) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsModalOpen(false)}
-              className="fixed inset-0 bg-primary/60 z-40"
+              className="fixed inset-0 bg-primary/60 z-50 max-h-screen"
               style={{
                 WebkitOverflowScrolling: 'touch', // Enable smooth scrolling on mobile
                 scrollbarWidth: 'none', 
                 msOverflowStyle: 'none', 
-                maxHeight: '80vh',
+                // maxHeight: '80vh',
               }}
             />
 
@@ -56,7 +56,7 @@ const ContactModal = ({ showButtons }) => {
               className="fixed inset-0 flex items-center justify-center z-50"
             >
               <div
-                className="relative bg-white w-full mx-2 md:mx-10 rounded-lg shadow-xl   overflow-auto"
+                className="relative bg-white w-full mx-2 md:mx-10 rounded-lg shadow-xl overflow-auto"
                 style={{
                   WebkitOverflowScrolling: 'touch', // Enable smooth scrolling on mobile
                   scrollbarWidth: 'none', 
@@ -77,12 +77,6 @@ const ContactModal = ({ showButtons }) => {
                 {/* Modal Content */}
                 <div
                   className="p-6 "
-                  // style={{
-                  //   WebkitOverflowScrolling: 'touch', // Enable smooth scrolling on mobile
-                  //   scrollbarWidth: 'none', 
-                  //   msOverflowStyle: 'none', 
-                  //   maxHeight: '80vh',
-                  // }}
                 >
                   <Questions_Form />
                 </div>

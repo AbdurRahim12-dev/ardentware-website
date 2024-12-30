@@ -96,9 +96,9 @@ const Hero = () => {
             </motion.p>
             <motion.button
               variants={itemVariants}
-              className='bg-secondary text-primary font-semibold px-6 py-3 text-center justify-center rounded-full hover:bg-secondary/70 duration-300 inline-flex items-center gap-2 font-gellix'
+              className='bg-secondary text-primary text-[16px] font-semibold px-6 py-[9px] text-center justify-center rounded-full hover:bg-secondary/70 duration-300 flex items-center gap-2'
             >
-              {activeContent.button} <BiRightArrow />
+              {activeContent.button} <BiRightArrow className='size-5' />
             </motion.button>
           </motion.div>
         </AnimatePresence>
