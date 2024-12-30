@@ -1,5 +1,6 @@
 import { BiLogoLinkedin } from 'react-icons/bi';
 import { motion } from 'motion/react';
+
 export default function LeadershipProfile() {
   return (
     <div className=' bg-[#000033] text-white py-12 px-4'>
@@ -20,7 +21,7 @@ export default function LeadershipProfile() {
                 key={profile.id}
                 initial={{ opacity: 0, x: -80 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ amount: 0.8, once: true  }}
+                viewport={{ amount: 0.8, once: true }}
                 className='max-w-sm '
               >
                 <div className='mb-6'>

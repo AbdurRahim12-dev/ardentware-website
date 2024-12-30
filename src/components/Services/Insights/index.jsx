@@ -1,5 +1,6 @@
-import InsightBlog from './InsightBlog';
-import AIResearch from './AIResearch';
+import { lazy } from 'react';
+const InsightBlog = lazy(() => import('./InsightBlog'));
+const AIResearch = lazy(() => import('./AIResearch'));
 
 export default function Insights() {
   return (

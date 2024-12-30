@@ -3,9 +3,7 @@ import { motion } from 'motion/react';
 export default function Ourpartner() {
   return (
     <>
-      <div
-        className='container mt-16'
-      >
+      <div className='container mt-16'>
         <div className='space-y-10'>
           <motion.h3
             initial={{ opacity: 0, x: 80 }}
@@ -31,15 +29,12 @@ export default function Ourpartner() {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-5 mt-12'>
           {logos.map((logo) => {
             return (
-              <div
-                key={logo.id}
-                className='flex justify-center items-center border'
-              >
+              <div key={logo.alt} className='flex justify-center items-center border'>
                 <motion.img
-                  src={logo.image}
-                  alt={logo.id}
+                  src={logo.src}
+                  alt={logo.alt}
                   className='object-cover w-auto h-auto'
-                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                  whileHover={{ scale: 1.09, transition: { duration: 0.2 } }}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.5 }}
@@ -58,27 +53,31 @@ export default function Ourpartner() {
 
 const logos = [
   {
-    id: 'microsoft',
-    image: '/images/logo/microsoft.jpg',
+    src: '/images/logo/AWS.jpg',
+    alt: 'AWS',
   },
   {
-    id: 'aws',
-    image: '/images/logo/AWS.jpg',
+    src: '/images/logo/google-cloud.jpg',
+    alt: 'google-cloud',
   },
   {
-    id: 'google-cloud',
-    image: '/images/logo/google-cloud.jpg',
+    src: '/images/logo/microsoft.jpg',
+    alt: 'microsoft',
   },
   {
-    id: 'proxmox',
-    image: '/images/logo/proxmox.png',
+    src: '/images/logo/Sophos.png',
+    alt: 'Sophos',
   },
   {
-    id: 'Sophos',
-    image: '/images/logo/Sophos.png',
+    src: '/images/logo/Fortinate.png',
+    alt: 'Fortinate',
   },
   {
-    id: 'trend-micro',
-    image: '/images/logo/trend-micro.jpg',
+    src: '/images/logo/trend-micro.jpg',
+    alt: 'trend-micro',
+  },
+  {
+    src: '/images/logo/proxmox.png',
+    alt: 'Proxmox',
   },
 ];

@@ -43,18 +43,6 @@ const Navbar = () => {
           )}
         </div>
         <ul className='hidden lg:flex items-center  mt-2'>
-          {/* {menuItems.map((item, index) => {
-            return (
-              <li key={index + 1} className=''>
-                <Link
-                  to={item.link}
-                  className='text-primary font-medium text-[20px] py-4 px-3 hover:bg-primary hover:text-white duration-500 font-gellix'
-                >
-                  {item.name}
-                </Link>
-              </li>
-            );
-          })} */}
           {menuItems.map((item, idx) => (
             <li key={item.href}>
               <Link
@@ -124,12 +112,12 @@ const Navbar = () => {
               {menuItems.map((item) => {
                 return (
                   <li
-                    key={item.link}
+                    key={item.name}
                     className='py-3 px-3 hover:bg-primary hover:text-white duration-500 font-semibold cursor-pointer'
                     style={{
                       backgroundColor: location.pathname === item.link ? '#2f78c4' : '',
                       color: location.pathname === item.link ? '#fff' : '',
-                      borderRadius: location.pathname === item.link ? '9999px' : '',
+                      // borderRadius: location.pathname === item.link ? '9999px' : '',
                       fontWeight: location.pathname === item.link ? '500' : ''
                     }}
                   >

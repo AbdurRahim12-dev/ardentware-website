@@ -50,7 +50,20 @@ export default function Accordion() {
                 index === accordionData.length - 1 ? 'border-b ' : ''
               } border-gray-400`}
             >
-              <p className='text-[#0a0a3c] mb-4 text-xl md:text-lg '>{item.content}</p>
+              <motion.p
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.3,
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 10
+                }}
+                viewport={{ amount: 0.8, once: true }}
+                className='text-[#0a0a3c] mb-4 text-xl font-medium '
+              >
+                {item.content}
+              </motion.p>
               <a
                 href='#'
                 className='text-blue-600 text-xl md:text-[1.29rem]  font-semibold hover:text-blue-700 flex items-center group'

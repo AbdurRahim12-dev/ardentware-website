@@ -38,10 +38,9 @@ export default function Future() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.8, once: true }}
-            className=' bg-secondary text-primary hover:bg-secondary/90 px-4 py-3 rounded-full text-xl font-semibold flex items-center gap-2'
+            className=' bg-secondary text-primary hover:bg-secondary/90 px-4 md:px-6 py-3 rounded-full text-xl font-semibold flex items-center gap-2'
           >
-            <span>Read the interactive report</span>
-            {/* <ArrowRight className='ml-2 h-4 w-4 transition-transform group-hover:translate-x-1' /> */}
+            Read the interactive report
             <BiRightArrow size={28} className='text-primary mt-1 font-thin' />
           </motion.button>
         </div>

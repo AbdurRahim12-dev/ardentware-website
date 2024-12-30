@@ -1,5 +1,7 @@
+import { lazy } from 'react';
+
 import { useForm } from 'react-hook-form';
-import Header_Text from '../ui/Header_Text/Header_Text';
+const Header_Text = lazy(() => import('../ui/Header_Text/Header_Text'));
 import { BiRightArrow } from 'react-icons/bi';
 import { ServiceFormFields } from '../../libs/ServiceFormFields';
 import { motion } from 'motion/react';

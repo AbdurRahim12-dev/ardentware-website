@@ -50,7 +50,7 @@ const Service_Hero = () => {
                 duration: 0.5,
                 ease: 'easeOut',
               }}
-              className='text-[18px] text-primary pr-10'
+              className='text-[20px] text-primary pr-10 font-medium'
             >
               We’re engineering technology, operations and data so that AMF1 can improve processes,
               speed decision-making and win races—and fans.

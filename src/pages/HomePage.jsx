@@ -1,15 +1,11 @@
-import Hero from '../components/Home/Hero';
-import Press_Release from '../components/Home/Press_Release';
-// import Driving_Future from '../components/Home/Driving_Future';
-// import Case_Studies from '../components/Home/Case_Studies';
-// import Pertnering from '../components/Home/Pertnering';
-// import News from '../components/Home/News';
-// import Drive_Career from '../components/Home/Drive_Career';
-import Questions_Form from '../components/Home/Questions_Form';
-// import Our_Partners from '../components/Home/Our_Partners';
-import SoftwareDriven from '../components/Home/SoftwareDriven';
-import Technology from '../components/Home/Technology';
-import TechnologySlider from '../components/Home/TechnologySlider';
+import { lazy } from 'react';
+
+const Hero = lazy(() => import('../components/Home/Hero'));
+const Press_Release = lazy(() => import('../components/Home/Press_Release'));
+const Questions_Form = lazy(() => import('../components/Home/Questions_Form'));
+const SoftwareDriven = lazy(() => import('../components/Home/SoftwareDriven'));
+const Technology = lazy(() => import('../components/Home/Technology'));
+const TechnologySlider = lazy(() => import('../components/Home/TechnologySlider'));
 
 const HomePage = () => {
   return (

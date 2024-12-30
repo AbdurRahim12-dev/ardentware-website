@@ -1,4 +1,6 @@
-import Questions_Form from '../components/Home/Questions_Form';
+import { lazy } from "react";
+
+const Questions_Form = lazy(() => import('../components/Home/Questions_Form'));
 
 export default function ContactPage() {
   return (
