@@ -98,7 +98,7 @@ const Questions_Form = () => {
           <motion.button
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             type='submit'
             className='rounded-full bg-secondary px-6 py-3 text-primary text-xl font-bold hover:bg-secondary/60 focus:outline-none focus:ring-2 focus:ring-secobg-secondary focus:ring-offset-2 inline-flex items-center gap-2 duration-300'
           >

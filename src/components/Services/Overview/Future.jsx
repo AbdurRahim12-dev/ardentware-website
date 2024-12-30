@@ -15,12 +15,12 @@ export default function Future() {
       </div>
 
       {/* Content */}
-      <div className='relative mx-auto max-w-6xl py-16'>
+      <div className='relative container py-16 px-2'>
         <div className='max-w-3xl space-y-6'>
           <motion.h1
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             className=' text-5xl font-semibold tracking-tight text-[#26efe9] sm:text-4xl lg:text-5xl '
           >
             Future-ready means AI-ready
@@ -28,7 +28,7 @@ export default function Future() {
           <motion.p
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             className='!mb-6 text-lg text-gray-200 sm:text-xl font-normal'
           >
             Explore the five essential areas to achieve AI mastery in this new report based on data
@@ -37,8 +37,8 @@ export default function Future() {
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.8 }}
-            className=' bg-secondary text-primary hover:bg-secondary/90 px-8 py-3 rounded-full text-lg md:text-[21px] font-semibold flex items-center gap-2'
+            viewport={{ amount: 0.8, once: true }}
+            className=' bg-secondary text-primary hover:bg-secondary/90 px-4 py-3 rounded-full text-xl font-semibold flex items-center gap-2'
           >
             <span>Read the interactive report</span>
             {/* <ArrowRight className='ml-2 h-4 w-4 transition-transform group-hover:translate-x-1' /> */}

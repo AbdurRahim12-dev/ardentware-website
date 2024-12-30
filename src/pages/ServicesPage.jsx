@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 
 const Header = lazy(() => import('../components/Services/Header'));
-const Overview = lazy(() => import('../components/Services/overview'));
+const Overview = lazy(() => import('../components/Services/Overview'));
 const Offering = lazy(() => import('../components/Services/Offer'));
 const Service_Hero = lazy(() => import('../components/Services/Service_Hero'));
 const ServiceNavbar = lazy(() => import('../components/Services/ServiceNavbar'));

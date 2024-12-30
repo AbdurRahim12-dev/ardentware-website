@@ -15,7 +15,7 @@ export default function Accordion() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ amount: 0.8 }}
+          viewport={{ amount: 0.8, once: true }}
           key={item.id}
           // className={`mb-[2px] ${
           //   index === accordionData.length - 1 ? 'rounded-b-lg overflow-hidden' : 'rounded-t-lg'

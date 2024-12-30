@@ -20,7 +20,7 @@ export default function AIResearch() {
           <motion.h1
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             className=' text-[31.952px]  text-white lg:text-5xl leading-tight '
             style={{ fontWeight: '400' }}
           >
@@ -29,7 +29,7 @@ export default function AIResearch() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             className='!mb-6 text-lg text-gray-200 sm:text-xl font-normal'
           >
             Our research team is improving data and AI driven decision-making by creating new
@@ -39,7 +39,7 @@ export default function AIResearch() {
           <motion.button
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true  }}
             className=' bg-secondary hover:bg-secondary/90 text-primary flex items-center gap-1 px-6 rounded-full py-2 text-[19px] font-bold'
           >
             <span >Know more</span>

@@ -12,7 +12,7 @@ const Case_Studies_Card = ({ data }) => {
     <motion.div
       initial={{ opacity: 0, x: 80 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ amount: 0.8 }}
+      viewport={{ amount: 0.8, once: true  }}
       className='bg-cover bg-center min-h-[325px] rounded-xl overflow-hidden relative'
       style={{ backgroundImage: `url(${image})` }}
       onMouseEnter={() => setIsHovered(true)}

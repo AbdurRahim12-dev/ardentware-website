@@ -22,7 +22,7 @@ export default function AIGovernance() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             className=' text-[31.952px]  text-white lg:text-5xl leading-tight '
             style={{ fontWeight: '400' }}
           >
@@ -31,7 +31,7 @@ export default function AIGovernance() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             className='!mb-6 text-lg text-gray-200 sm:text-xl font-medium'
           >
             Traditional AI governance approaches are outdated and often ineffective. Our modern
@@ -41,7 +41,7 @@ export default function AIGovernance() {
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             className=' bg-secondary text-primary hover:bg-secondary/90 px-8 py-3 rounded-full  font-semibold flex items-center gap-2'
           >
             <span style={{ fontSize: '22px' }}>Explore our solution</span>

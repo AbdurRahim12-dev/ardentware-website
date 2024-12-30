@@ -9,12 +9,12 @@ export default function VideoCard({ image, title, buttonText }) {
     >
       <div className='text-white p-4 md:p-8 container'>
         <div
-          className='absolute top-28 md:top-20 w-11/12  lg:w-3/12  bg-primary/80 rounded-lg p-8 space-y-4 md:space-y-10'
+          className='absolute top-28 md:top-20 w-11/12  lg:w-5/12 xl:w-3/12  bg-primary/80 rounded-lg p-8 space-y-4 md:space-y-10'
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             className='text-3xl sm:text-3xl lg:text-5xl text-secondary font-semibold !leading-tight'
           >
             {title}
@@ -22,7 +22,7 @@ export default function VideoCard({ image, title, buttonText }) {
           <motion.a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             href='#'
             className='flex items-center gap-2 text-lg md:text-xl text-secondary font-semibold w-max text-center'
           >

@@ -48,7 +48,7 @@ export default function TechnologySlider() {
       <motion.h2
         initial={{ opacity: 0, y: -100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ amount: 0.8 }}
+        viewport={{ amount: 0.8, once: true }}
         className='text-3xl md:text-4xl font-bold text-center text-gray-800 font-gellix'
       >
         Technology Partners

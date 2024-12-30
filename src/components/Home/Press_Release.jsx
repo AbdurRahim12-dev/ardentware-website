@@ -9,7 +9,7 @@ const Press_Release = () => {
           <motion.h2
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ once: true, amount: 0.8 }}
             className='text-2xl font-medium'
           >
             Modernizing Technology, Transforming Experiences

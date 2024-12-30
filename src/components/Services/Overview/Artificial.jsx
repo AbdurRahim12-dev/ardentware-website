@@ -10,14 +10,14 @@ export default function Artificial() {
          initial={{ opacity: 0, x: -20 }}
          whileInView={{ opacity: 1, x: 0 }}
          whileHover={{ scale: 1.1 }}
-         viewport={{ amount: 0.8 }}
+         viewport={{ amount: 0.8, once: true }}
          width={400} src='/images/iso-iec-42001-badge.png' alt='' loading='lazy' />
 
         <div className='space-y-4 px-4'>
           <motion.h5
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             className='text-accent  text-[25px] md:text-3xl font-semibold leading-snug'
           >
             Cognizant is the first IT services provider to achieve ISO <br  className='hidden md:block'/>
@@ -26,7 +26,7 @@ export default function Artificial() {
           <motion.p
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true  }}
             className='text-primary font-gellix text-xl font-medium leading-tight'
           >
             ISO/IEC 42001:2023 is the world’s first AI management system standard. The
@@ -39,7 +39,7 @@ export default function Artificial() {
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             className='text-accent  text-[18px] md:text-[20px] font-bold leading-tight flex items-center gap-2  rounded-md text-left'
           >
             Learn about our responsible AI principles <BiRightArrow size={28} className='text-accent mt-1 font-thin'/>

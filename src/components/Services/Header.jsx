@@ -25,7 +25,7 @@ const Header = () => {
       <section id='header' className='bg-primary sticky top-0 z-50 transition-all duration-300 hidden md:block'>
         <div className='container flex justify-between items-center py-3'>
           <div className='space-y-1'>
-            <Link to={`/service`} className='text-accent font-bold hidden md:block'>
+            <Link to={`/service`} className='text-accent font-bold hidden lg:block'>
               Services
             </Link>
             <h3 className='text-lg text-white font-bold'>Data and AI</h3>
@@ -36,7 +36,7 @@ const Header = () => {
             smooth={true}
             duration={500}
             offset={-75}
-            className='hidden md:block'
+            className='hidden lg:block'
           >
             <div>
               <RoundButton
@@ -54,7 +54,7 @@ const Header = () => {
       >
         <div className='container flex justify-between items-center py-3'>
           <div className='space-y-1'>
-            <Link to={`/service`} className='text-accent font-bold hidden md:block'>
+            <Link to={`/service`} className='text-accent font-bold hidden lg:block'>
               Services
             </Link>
             <h3 className='text-lg text-white font-bold'>Data and AI</h3>
@@ -65,7 +65,7 @@ const Header = () => {
             smooth={true}
             duration={500}
             offset={-75}
-            className='hidden md:block'
+            className='hidden lg:block'
           >
             <div>
               <RoundButton

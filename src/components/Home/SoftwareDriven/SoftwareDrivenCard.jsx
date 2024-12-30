@@ -57,7 +57,7 @@ export default function SoftwareDrivenCard({ title, description, imageUrl, video
         <motion.h2
           initial={{ opacity: 0, y: -100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ amount: 0.8 }}
+          viewport={{ amount: 0.8, once: true }}
           className={`text-white text-4xl md:text-6xl font-bold font-gellix transform transition-all duration-500 !leading-tight ${isHovered ? '-translate-y-10' : 'translate-y-0'}`}
         >
           {title}

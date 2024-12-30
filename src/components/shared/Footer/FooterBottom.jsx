@@ -9,7 +9,7 @@ export default function FooterBottom() {
           <motion.div
             initial={{ opacity: 0, y: -100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             className='space-y-4 '
           >
             <h2 className='text-lg font-semibold text-primary'>Quick Link</h2>
@@ -41,7 +41,7 @@ export default function FooterBottom() {
           <motion.div
             initial={{ opacity: 0, y: -100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             className='space-y-4 '
           >
             <h2 className='text-lg font-semibold text-primary '>Our Services</h2>
@@ -83,7 +83,7 @@ export default function FooterBottom() {
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             className='space-y-4 '
           >
             <h2 className='text-lg font-semibold text-primary '>Industries</h2>
@@ -125,7 +125,7 @@ export default function FooterBottom() {
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             className='space-y-2 '
           >
             <h2 className='text-lg font-semibold text-primary'>Find Us</h2>

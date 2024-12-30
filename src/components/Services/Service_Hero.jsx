@@ -12,7 +12,7 @@ const Service_Hero = () => {
             damping: 20,
             stiffness: 100,
           }}
-          className='text-[3rem] md:text-[4rem] font-semibold w-full md:w-[58%] leading-tight  py-[5.5rem] px-2'
+          className='text-[3rem] md:text-[5rem] font-semibold w-full md:w-[58%] leading-tight  py-[5.5rem] px-2'
         >
           Empowering better, faster decision-making with data and AI
         </motion.h1>

@@ -48,7 +48,7 @@ export default function Technology() {
             <motion.h1
               initial={{ opacity: 0, y: -100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ amount: 0.8 }}
+              viewport={{ amount: 0.8, once: true }}
               className='text-3xl font-medium font-gellix leading-tight text-gray-900 sm:text-4xl md:text-5xl md:leading-tight md:mt-60  '
             >
               We empower companies to stay ahead by acting with clarity and agility.
@@ -58,16 +58,14 @@ export default function Technology() {
           {/* Right Column - Services Grid */}
           <div className='grid gap-8 lg:grid-cols-2'>
             {/* Left Services */}
-            <div
-              className='space-y-4'
-            >
+            <div className='space-y-4'>
               {leftServices.map((service) => (
                 <motion.div
                   key={service.title}
                   className='border-b border-gray-200'
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ amount: 0.8 }}
+                  viewport={{ once: true, amount: 0.8 }}
                 >
                   <button
                     // onClick={() => toggleItem(service.title)}
@@ -117,7 +115,7 @@ export default function Technology() {
                   className='border-b border-gray-200'
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ amount: 0.8 }}
+                  viewport={{ amount: 0.8, once: true }}
                 >
                   <button
                     // onClick={() => toggleItem(service.title)}

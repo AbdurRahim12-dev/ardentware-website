@@ -60,6 +60,12 @@ const Navbar = () => {
               <Link
                 to={item.link}
                 className='relative px-5 py-1 text-[19px] font-medium text-primary transition-all duration-300 group flex items-center gap-2'
+                style={{
+                  backgroundColor: location.pathname === item.link ? '#2f78c4' : '',
+                  color: location.pathname === item.link ? '#fff' : '',
+                  borderRadius: location.pathname === item.link ? '9999px' : '',
+                  fontWeight: location.pathname === item.link ? '500' : ''
+                }}
                 onMouseEnter={() => setHoveredIndex(idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
@@ -120,6 +126,12 @@ const Navbar = () => {
                   <li
                     key={item.link}
                     className='py-3 px-3 hover:bg-primary hover:text-white duration-500 font-semibold cursor-pointer'
+                    style={{
+                      backgroundColor: location.pathname === item.link ? '#2f78c4' : '',
+                      color: location.pathname === item.link ? '#fff' : '',
+                      borderRadius: location.pathname === item.link ? '9999px' : '',
+                      fontWeight: location.pathname === item.link ? '500' : ''
+                    }}
                   >
                     <Link to={item.link} onClick={() => setMobileMenuShow(false)}>
                       {item.name}

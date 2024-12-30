@@ -12,7 +12,7 @@ export default function Offerings() {
             transition={{ duration: 1 }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             className=' text-3xl md:text-4xl font-light'
           >
             Data and AI solutions for the <br className='hidden md:block' /> modern enterprise
@@ -20,7 +20,7 @@ export default function Offerings() {
           <motion.p
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             className='flex-1 text-[20px] font-medium text-primary'
           >
             Wherever you are on your journey, in whatever industry you are in—from aggregating vast

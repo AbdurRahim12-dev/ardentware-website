@@ -9,7 +9,7 @@ export default function Services() {
         <motion.h2
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ amount: 0.8 }}
+          viewport={{ amount: 0.8, once: true }}
           className='text-[31.952px] md:text-5xl font-semibold text-[#0A0F2C] leading-tight'
         >
           Explore more services
@@ -17,7 +17,7 @@ export default function Services() {
         <motion.p
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ amount: 0.6 }}
+          viewport={{ amount: 0.6, once: true  }}
           className='text-lg md:text-xl text-primary font-medium  leading-tight'
         >
           Learn more about other services that can enhance data and AI in your business:
@@ -31,7 +31,7 @@ export default function Services() {
               key={service.id}
               initial={{ opacity: 0, x: -80 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ amount: 0.8 }}
+              viewport={{ amount: 0.8, once: true }}
               className='grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 '
             >
               <div className='relative bg-black overflow-hidden h-[200px] md:h-[250px]'>

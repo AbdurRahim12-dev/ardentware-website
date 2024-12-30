@@ -10,7 +10,7 @@ export default function Ourpartner() {
           <motion.h3
             initial={{ opacity: 0, x: 80 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             className='text-[31.952px] md:text-5xl font-semibold text-[#000048] leading-tight'
           >
             Our Partners and alliances for data and AI solutions
@@ -18,7 +18,7 @@ export default function Ourpartner() {
           <motion.p
             initial={{ opacity: 0, x: 80 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.8, once: true }}
             className='text-lg md:text-xl font-medium text-[#000048]'
           >
             We form partnerships and strategic alliances with world-class organizations to expand
@@ -38,11 +38,14 @@ export default function Ourpartner() {
                 <motion.img
                   src={logo.image}
                   alt={logo.id}
-                  className='object-cover'
-                  whileHover={{ scale: 1.1 }}
-                  initial={{ opacity: 0, x: -100 }}
+                  className='object-cover w-auto h-auto'
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                  initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ amount: 0.8 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  loading='lazy'
+                  width={200}
+                  height={100}
                 />
               </div>
             );

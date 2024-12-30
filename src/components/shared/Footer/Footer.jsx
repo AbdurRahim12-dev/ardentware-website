@@ -32,7 +32,7 @@ const Footer = () => {
               href={item.link}
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ amount: 0.8 }}
+              viewport={{ amount: 0.8, once: true }}
             >
               {item.icon}
             </motion.a>
@@ -48,7 +48,7 @@ const Footer = () => {
               className='text-primary hover:text-accent/80'
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ amount: 0.8 }}
+              viewport={{ amount: 0.8, once: true }}
             >
               {item.id}
             </motion.a>
