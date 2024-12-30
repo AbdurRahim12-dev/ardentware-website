@@ -21,7 +21,7 @@ export default function Business() {
               className='inline-block'
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ amount: 0.8 }}
+              viewport={{ amount: 0.8, once: true }}
               transition={{
                 delay: index * 0.2, // Add delay for each word
                 type: 'spring',
