@@ -114,7 +114,7 @@ export default function Slider() {
               <button
                 key={index}
                 className={`w-8 h-1.5 rounded-sm bg-accent transition-all duration-300 font-gellix ${
-                  currentSlide === index ? 'bg-accent/20' : ''
+                  currentSlide === index ? 'bg-accent' : 'bg-accent/20'
                 }`}
                 onClick={() => setCurrentSlide(index)}
                 disabled={currentSlide === index}

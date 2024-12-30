@@ -11,11 +11,11 @@ export default function Navbar() {
               <Link
                 to={item.link.substring(1)} // Remove '#' to match the section id
                 smooth={true}
-                duration={500} // Set the duration of the scroll
+                duration={100} // Set the duration of the scroll
                 offset={-75} // Optional: adjust scroll offset for fixed header
-                className='text-white hover:text-gray-200 cursor-pointer hover:bg-[#1c4893] px-4 py-[.6rem]'
+                className='text-white hover:text-gray-200 cursor-pointer hover:bg-accent px-4 py-[.6rem]'
                 spy={true}
-                activeClass='text-white bg-[#1c4893]'
+                activeClass='text-white bg-accent'
               >
                 {item.id}
               </Link>
