@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 const Press_Release = () => {
   const text =
-    ' At Ardentware, we empower businesses t stay ahead in a rapidly evolving world. By modernizing technology, reimagining processes, and transforming experiences, we let you focus on your business while we seamlessly manage the technology that drives it.';
+    ' At Ardentware, we empower businesses to stay ahead in a rapidly evolving world. By modernizing technology, reimagining processes, and transforming experiences, we let you focus on your business while we seamlessly manage the technology that drives it.';
   // const line = text.split('.');
   const words = text.split(' ');
 
@@ -26,22 +26,22 @@ const Press_Release = () => {
       </div>
       <div className='container py-16'>
         {/* <motion.h4
-        style={{
-          fontWeight: 300,
-          color: 'rgba(0, 0, 72, 1)',
-        }}
-        className="text-2xl md:text-[1.8rem] lg:text-[36px] text-left text-wrap leading-tight"
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ amount: 0.8, once: true }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-      >
-        At <span className="font-bold text-accent">Ardentware</span>, we empower businesses to
-        stay ahead in a rapidly evolving world. By modernizing technology,{' '}
-        <span className="font-bold text-accent">reimagining</span> processes, and transforming
-        experiences, we let you focus on your business while we seamlessly manage the technology
-        that drives it.
-      </motion.h4> */}
+          style={{
+            fontWeight: 300,
+            color: 'rgba(0, 0, 72, 1)',
+          }}
+          className='text-2xl md:text-[1.8rem] lg:text-[36px] text-left text-wrap leading-tight'
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ amount: 0.8, once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          At <span className='font-bold text-accent'>Ardentware</span>, we empower businesses to
+          stay ahead in a rapidly evolving world. By modernizing technology,{' '}
+          <span className='font-bold text-accent'>reimagining</span> processes, and transforming
+          experiences, we let you focus on your business while we seamlessly manage the technology
+          that drives it.
+        </motion.h4> */}
 
         <motion.h3
           className='text-2xl md:text-[1.8rem] lg:text-[36px] text-left text-wrap leading-tight'
@@ -61,7 +61,7 @@ const Press_Release = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ amount: 0.8, once: true }}
               transition={{
-                delay: index * 0.1, // Add delay for each word
+                delay: index * 0.09, // Add delay for each word
                 type: 'spring',
                 stiffness: 100,
                 damping: 20,

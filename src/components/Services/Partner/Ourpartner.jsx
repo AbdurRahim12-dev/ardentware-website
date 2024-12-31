@@ -32,13 +32,13 @@ export default function Ourpartner() {
           {logos.map((logo) => {
             return (
               <div key={logo.alt} className='flex justify-center items-center border'>
-                <div className="relative group cursor-pointer">
+                <div className="relative group ">
                 <div className="relative">
                   <motion.img
                     src={logo.src}
                     alt={logo.alt}
                     className='object-cover w-auto h-auto'
-                    whileHover={{ scale: 1.1, transition: { duration: 0.8, delay: 0.2 } }}
+                    whileHover={{ scale: 1.3, transition: { duration: 0.5, delay: 0.2 } }}
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.5 }}
@@ -50,7 +50,7 @@ export default function Ourpartner() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
-                    className="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-2 rounded-lg whitespace-nowrap"
+                    className="absolute top-10 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-2 rounded-lg whitespace-nowrap"
                     style={{ 
                       x: '-50%',
                       y: 0,

@@ -13,7 +13,7 @@ const ContactModal = ({ showButtons }) => {
         initial={{ opacity: 0, y: 100 }}
         animate={showButtons ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
         transition={{ duration: 0.5 }}
-        className='fixed top-1/2 -right-10 !rotate-90 overflow-auto'
+        className='fixed top-1/2 -right-10 !rotate-90 overflow-auto z-50'
         style={{
           WebkitOverflowScrolling: 'touch', // Enable smooth scrolling on mobile
           scrollbarWidth: 'none',
@@ -23,9 +23,9 @@ const ContactModal = ({ showButtons }) => {
       >
         <button
           onClick={() => setIsModalOpen(true)}
-          className='flex items-center gap-2 rounded-md bg-accent px-4 py-2 text-white shadow-md hover:bg-accent/80 focus:outline-none z-50 '
+          className='flex items-center gap-2 rounded-md bg-accent px-4 py-2 text-white shadow-md hover:bg-accent/80 focus:outline-none '
         >
-          <span>Contact Us</span>
+          Contact Us
         </button>
       </motion.div>
 

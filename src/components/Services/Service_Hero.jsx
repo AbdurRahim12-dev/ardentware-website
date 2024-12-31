@@ -1,5 +1,5 @@
 import { BiRightArrow } from 'react-icons/bi';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 const Service_Hero = () => {
   return (
     <section className='bg-[url("https://www.cognizant.com/content/dam/connectedassets/cognizant-global-marketing/marketing-channels/cognizant-dotcom/en_us/services/images/artificial-intelligence-services-hero-image.jpg")] bg-cover bg-center bg-no-repeat relative'>
@@ -37,7 +37,7 @@ const Service_Hero = () => {
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.8,
+                duration: 0.5,
                 ease: 'easeOut',
               }}
               className='md:text-2xl text-xl text-primary font-semibold'
@@ -48,7 +48,7 @@ const Service_Hero = () => {
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.8,
+                duration: 0.7,
                 ease: 'easeOut',
               }}
               className='text-[20px] text-primary pr-10 font-medium'
@@ -61,7 +61,7 @@ const Service_Hero = () => {
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.8,
+                duration: 0.9,
                 ease: 'easeOut',
               }}
               href='#'

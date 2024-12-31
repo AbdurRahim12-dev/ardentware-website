@@ -44,9 +44,9 @@ const Navbar = () => {
         </div>
         <ul className='hidden lg:flex items-center  mt-2'>
           {menuItems.map((item, idx) => {
-            const isActive = location.pathname === item.link;
+            // const isActive = location.pathname === item.link;
             return (
-              <li key={item.href} className='relative'>
+              <li key={item.name} className='relative'>
                 <Link
                   to={item.link}
                   className='relative px-5 py-1 text-[19px] font-medium text-primary transition-all duration-300 group flex items-center gap-2'
@@ -65,25 +65,24 @@ const Navbar = () => {
                   {hoveredIndex === idx && (
                     <motion.div
                       layoutId='navbar-hover'
-                      className={`absolute inset-0 border-b-2 border-primary max-w-[6rem] mx-auto group-hover:left-0 ${
-                        hoveredIndex === idx ? 'left-0 w-full' : 'left-1/2 w-0'
-                      }`}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.8 }}
+                      className='absolute inset-0 border-b-2 border-primary max-w-[6rem] mx-auto transition-all duration-150'
+                      initial={{ opacity: 0, width: 0, scaleX: 0 }}
+                      animate={{ opacity: 1, width: '100%', scaleX: 1 }}
+                      exit={{ opacity: 0, width: 0, scaleX: 0 }}
                       transition={{
-                        type: 'spring',
-                        bounce: 0.4,
-                        duration: 0.4,
+                        duration: 0.3,
+                        ease: 'easeInOut',
+                        opacity: { duration: 0.3 },
+                        exit: { duration: 0.3 },
                       }}
                     />
                   )}
                 </Link>
-                <span
+                {/* <span
                   className={`absolute -bottom-2 h-[3px] bg-white opacity-50 transition-all duration-500 ease-in-out group-hover:w-full group-hover:left-0 ${
                     isActive ? 'left-0 w-full' : 'left-1/2 w-0'
                   }`}
-                />
+                /> */}
               </li>
             );
           })}

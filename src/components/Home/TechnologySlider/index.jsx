@@ -35,7 +35,7 @@ export default function TechnologySlider() {
         alt: 'trend-micro',
       },
       {
-        src: '/images/logo/proxmox.png',
+        src: '/images/logo/proxmox-x.png',
         alt: 'Proxmox',
       },
     ];
